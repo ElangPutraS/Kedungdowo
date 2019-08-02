@@ -1,15 +1,6 @@
-# LARAVOLT
+# Website Desa Kedungdowo
 
-Laravolt adalah platform untuk mengembangkan aplikasi berbasis web. Tujuan yang hendak dicapai adalah:
-
-1. Mempercepat proses development
-2. Meningkatkan happiness index programmer
-3. Mengurangi barrier to entry bagi programmer baru
-
-Untuk mencapai tujuan di atas, Laravolt menyediakan:
-
-1. Package yang _ready to use_: authentication, user management, CMS, form builder, table builder, admin panel, settings, dan lain-lain.
-2. Coding guideline, sehingga setiap programmer yang terlibat punya kerangka berpikir yang sama. Hal ini diperlukan agar programmer bisa saling membantu satu sama lain dengan cepat.
+Website Resmi Kedungdowo
 
 ## Instalasi
 
@@ -37,34 +28,3 @@ Langkah ini perlu dilakukan agar aset-aset yang dibutuhkan untuk menampilkan hal
                     : redirect()->guest(route('auth::login'));
     }
 ```
-
-## FAQ
-
-### ENUM
-Kenapa key dan value harus sama?
-Translation
-
-### Upload File
-Laravel media-library
-
-### Maipulasi Gambar
-intervention/image
-
-### Baca Tulis Excel
-box/spout
-
-### Export to PDf
-
-
-### Semantic UI Form Builder
-laravolt/semantic-form
-
-
-### Suitable Table Builder
-laravolt/suitable
-
-### Avatar Generator
-laravolt/avatar
-
-### Struktur Tree
-nested-set
