@@ -1,6 +1,6 @@
 # Website Desa Kedungdowo
 
-Website Resmi Kedungdowo
+Website Resmi Kedungdowo.
 
 ## Instalasi
 
