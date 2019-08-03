@@ -18,7 +18,7 @@ class AlterMailAddMoreMetadataColumns extends Migration
             $table->text('cc')->nullable();
             $table->text('bcc')->nullable();
             $table->text('reply_to')->nullable();
-            $table->unsignedSmallInteger('priority')->nullable();
+            $table->boolean('priority')->nullable();
             $table->string('content_type', 255)->default('text/plain');
         });
     }

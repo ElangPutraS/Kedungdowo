@@ -15,7 +15,7 @@ class CreateMailTable extends Migration
     {
         Schema::create('mail', function (Blueprint $table) {
             $table->increments('id');
-            $table->unsignedTinyInteger('status')->default(0);
+            $table->boolean('status')->default(0);
             $table->text('from');
             $table->text('to');
             $table->string('subject');
