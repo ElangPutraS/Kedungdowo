@@ -14,7 +14,7 @@ class AlterMailAddErrorColumn extends Migration
     public function up()
     {
         Schema::table('mail', function (Blueprint $table) {
-            $table->text('error')->nullable();
+            $table->string('error')->nullable();
         });
     }
 }
