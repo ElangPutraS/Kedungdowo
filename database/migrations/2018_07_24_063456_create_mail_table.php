@@ -15,11 +15,11 @@ class CreateMailTable extends Migration
     {
         Schema::create('mail', function (Blueprint $table) {
             $table->increments('id');
-            $table->boolean('status')->default(0);
-            $table->string('from');
-            $table->string('to');
+            $table->unsignedTinyInteger('status')->default(0);
+            $table->json('from');
+            $table->json('to');
             $table->string('subject');
-            $table->string('body');
+            $table->text('body');
             $table->timestamps();
             $table->softDeletes();
         });

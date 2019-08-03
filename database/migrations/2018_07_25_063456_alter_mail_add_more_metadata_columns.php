@@ -14,11 +14,11 @@ class AlterMailAddMoreMetadataColumns extends Migration
     public function up()
     {
         Schema::table('mail', function (Blueprint $table) {
-            $table->string('sender')->nullable();
-            $table->string('cc')->nullable();
-            $table->string('bcc')->nullable();
-            $table->string('reply_to')->nullable();
-            $table->boolean('priority')->nullable();
+            $table->json('sender')->nullable();
+            $table->json('cc')->nullable();
+            $table->json('bcc')->nullable();
+            $table->json('reply_to')->nullable();
+            $table->unsignedSmallInteger('priority')->nullable();
             $table->string('content_type', 255)->default('text/plain');
         });
     }
