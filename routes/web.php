@@ -11,5 +11,5 @@
 |
 */
 
-Route::redirect('/', 'auth/login');
-Route::get('home', \App\Http\Controllers\Home::class)->name('home');
+Route::get('/', 'LandingController@index');
+Route::get('home', 'Home')->name('home');

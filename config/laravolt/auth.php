@@ -32,9 +32,9 @@ return [
         'prefix'     => 'auth',
     ],
     'redirect'     => [
-        'after_login'          => '/',
-        'after_register'       => '/',
-        'after_reset_password' => '/',
+        'after_login'          => '/home',
+        'after_register'       => '/home',
+        'after_reset_password' => '/home',
 
         // WARNING: after_logout redirection only valid for Laravel >= 5.7
         'after_logout'         => '/',
