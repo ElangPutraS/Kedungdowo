@@ -20,7 +20,8 @@
         "laravolt/semantic-form": "^2.2",
         "laravolt/suitable": "^3.3",
         "laravolt/thunderclap": "^0.14.0",
-        "laravolt/ui": "^0.7.2"
+        "laravolt/ui": "^0.7.2",
+        "spatie/laravel-medialibrary": "^7.0.0"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",
