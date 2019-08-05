@@ -22,7 +22,9 @@
         <tr><td>Desc</td><td>{{ $page->desc }}</td></tr>
         <tr><td>Created by</td><td>{{ $page->created_by }}</td></tr>
         <tr><td>Updated by</td><td>{{ $page->updated_by }}</td></tr>
+        <tr><td>Published</td><td>{{ $page->published }}</td></tr>
         <tr><td>Deleted at</td><td>{{ $page->deleted_at }}</td></tr>
+        <tr><td>Category</td><td>{{ $page->category_id }}</td></tr>
         <tr><td>Created at</td><td>{{ $page->created_at }}</td></tr>
         <tr><td>Updated at</td><td>{{ $page->updated_at }}</td></tr>
     </table>

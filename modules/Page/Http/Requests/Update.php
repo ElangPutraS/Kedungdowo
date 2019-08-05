@@ -19,6 +19,8 @@ class Update extends Store
             'desc' => ['required'],
             'created_by' => ['required'],
             'updated_by' => ['required'],
+            'published' => ['required'],
+            'category_id' => ['required'],
         ];
     }
 
