@@ -3,6 +3,7 @@
 namespace Modules\Menu\Http\Controllers;
 
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\DB;
 use Modules\Menu\Http\Requests\Store;
 use Modules\Menu\Http\Requests\Update;
 use Modules\Menu\Models\Menu;
@@ -19,14 +20,20 @@ class MenuController extends Controller
 
     public function create()
     {
-        return view('menu::create');
+        $listTitle = Menu::all()->mapWithKeys(function ($i) {
+            return [$i['id'] => $i['title']];
+        })->toArray();
+        $listTitle = [0 => 'Tidak Ada'] + $listTitle;
+
+        return view('menu::create', compact('listTitle'));
     }
 
     public function store(Store $request)
     {
+        $request->request->set('parent_id', $request->parent_id == 0 ? null : $request->parent_id);
         Menu::create($request->all());
 
-        return redirect()->route('menu.index')->withSuccess('Menu saved');
+        return redirect()->route('menu.index')->withSuccess('Menu berhasil ditambah');
     }
 
     public function show(Menu $menu)
@@ -36,20 +43,30 @@ class MenuController extends Controller
 
     public function edit(Menu $menu)
     {
-        return view('menu::edit', compact('menu'));
+        $listTitle = Menu::all()->mapWithKeys(function ($i) use ($menu) {
+            if ($i['id'] != $menu->id) {
+                return [$i['id'] => $i['title']];
+            }
+
+            return [$i['id'] => null];
+        })->filter()->toArray();
+        $listTitle = [0 => 'Tidak Ada'] + $listTitle;
+
+        return view('menu::edit', compact('menu', 'listTitle'));
     }
 
     public function update(Update $request, Menu $menu)
     {
+        $request->request->set('parent_id', $request->parent_id == 0 ? null : $request->parent_id);
         $menu->update($request->all());
 
-        return redirect()->back()->withSuccess('Menu saved');
+        return redirect()->route('menu.index')->withSuccess('Menu berhasil diperbarui');
     }
 
     public function destroy(Menu $menu)
     {
         $menu->delete();
 
-        return redirect()->route('menu.index')->withSuccess('Menu deleted');
+        return redirect()->route('menu.index')->withSuccess('Menu berhasil dihapus');
     }
 }

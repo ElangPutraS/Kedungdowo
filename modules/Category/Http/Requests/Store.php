@@ -14,9 +14,8 @@ class Store extends FormRequest
     public function rules()
     {
         return [
-            'title' => ['required'],
-            'slug' => ['required'],
-            'parent_id' => [''],
+            'title' => 'required|max:191|unique:categories,title',
+            'parent_id' => 'sometimes',
         ];
     }
 

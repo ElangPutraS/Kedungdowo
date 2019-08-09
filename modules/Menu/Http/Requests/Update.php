@@ -2,8 +2,6 @@
 
 namespace Modules\Menu\Http\Requests;
 
-use Illuminate\Foundation\Http\FormRequest;
-
 class Update extends Store
 {
     /**
@@ -14,10 +12,10 @@ class Update extends Store
     public function rules()
     {
         return [
-            'title' => ['required'],
-            'url' => ['required'],
-            'parent_id' => [''],
-            'location' => ['required'],
+            'title' => 'required|max:191',
+            'url' => 'required|max:191',
+            'parent_id' => 'sometimes',
+            'location' => 'required',
         ];
     }
 

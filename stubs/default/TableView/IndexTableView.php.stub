@@ -1,0 +1,23 @@
+<?php
+
+namespace :Namespace:\:ModuleName:\TableView;
+
+use Laravolt\Suitable\Columns\Numbering;
+use Laravolt\Suitable\Columns\RestfulButton;
+use Laravolt\Suitable\Columns\Text;
+use Laravolt\Suitable\TableView;
+
+class IndexTableView extends TableView
+{
+    protected function columns()
+    {
+        return [
+            Numbering::make('No')->setCellAttributes([
+                            'style' => 'background-color:white',
+                            'class' => 'ui center aligned'
+            ]),
+            :TABLE_VIEW_FIELDS:
+            RestfulButton::make(':moduleName:')->except('view'),
+        ];
+    }
+}

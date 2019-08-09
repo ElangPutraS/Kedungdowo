@@ -12,12 +12,17 @@ class IndexTableView extends TableView
     protected function columns()
     {
         return [
-            Numbering::make('No'),
-            Text::make('title')->sortable(),
-            Text::make('url')->sortable(),
-            Text::make('parent_id')->sortable(),
-            Text::make('location')->sortable(),
-            RestfulButton::make('menu'),
+            Numbering::make('No')->setCellAttributes([
+                'style' => 'background-color:white',
+                'class' => 'ui center aligned',
+            ]),
+            Text::make('title', 'Judul')->sortable()->setHeaderAttributes(['width' => '300px']),
+            Text::make('url', 'URL')->sortable(),
+            Text::make('parent_title', 'Parent Menu')
+                ->setHeaderAttributes(['class' => 'ui center aligned'])
+                ->setCellAttributes(['class' => 'ui center aligned']),
+            Text::make('location_title', 'Lokasi'),
+            RestfulButton::make('menu')->except('view'),
         ];
     }
 }

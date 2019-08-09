@@ -3,6 +3,7 @@
 namespace Modules\Page\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Modules\Category\Models\Category;
 
 class Store extends FormRequest
 {
@@ -13,15 +14,27 @@ class Store extends FormRequest
      */
     public function rules()
     {
-        return [
-            'name' => ['required'],
-            'short' => ['required'],
-            'desc' => ['required'],
-            'created_by' => ['required'],
-            'updated_by' => ['required'],
-            'published' => ['required'],
-            'category_id' => ['required'],
+        $category = strtolower(Category::find($this->category_id)->title);
+
+        $rules = [
+            'category_id' => 'required',
+            'title' => 'required|max:191|unique:pages,title',
+            'description' => 'sometimes|max:8000',
+            'short_desc' => 'sometimes|max:400',
+            'published' => 'sometimes',
         ];
+
+        if (strpos($category, 'galeri') !== false &&
+            (! $this->uploads)) {
+            $rules['foto'] = 'required';
+        }
+
+        if (strpos($category, 'slideshow') !== false &&
+            (! $this->uploads)) {
+            $rules['slideshow'] = 'required';
+        }
+
+        return $rules;
     }
 
     /**

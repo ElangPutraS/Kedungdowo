@@ -2,8 +2,6 @@
 
 namespace Modules\Category\Http\Requests;
 
-use Illuminate\Foundation\Http\FormRequest;
-
 class Update extends Store
 {
     /**
@@ -14,9 +12,8 @@ class Update extends Store
     public function rules()
     {
         return [
-            'title' => ['required'],
-            'slug' => ['required'],
-            'parent_id' => [''],
+            'title' => 'required|max:191|unique:categories,title,' . $this->category->id,
+            'parent_id' => 'sometimes|not_in:' . $this->category->id,
         ];
     }
 
