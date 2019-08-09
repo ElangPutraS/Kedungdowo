@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="{{ mix('semantic/semantic.min.css', 'laravolt') }}"/>
     <link rel="stylesheet" type="text/css" href="{{ mix('css/all.css', 'laravolt') }}"/>
     <style>
+
         .full-width {
             width: 100% !important;
         }
@@ -24,7 +25,7 @@
         }
 
         .p-20 {
-            padding: 20px;
+            padding: 0px;
         }
 
         .middle-align {
@@ -70,6 +71,7 @@
 <body data-theme="{{ config('laravolt.ui.sidebar_theme') }}" class="{{ $bodyClass ?? '' }}">
 
 @yield('body')
+@include('landing.footer')
 
 <script type="text/javascript" src="{{ mix('js/all.js', 'laravolt') }}"></script>
 {!! Assets::group('laravolt')->js() !!}

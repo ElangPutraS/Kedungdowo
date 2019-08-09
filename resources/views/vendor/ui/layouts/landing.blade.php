@@ -7,11 +7,13 @@
 
     <div class="content">
         <div class="content__inner">
-            <div class="ui container-fluid content__body p-1" style="margin: 0">
+            <div class="ui container-fluid content__body p-1">
                 @yield('content')
             </div>
 
         </div>
+
+
     </div>
 </div>
 @endsection

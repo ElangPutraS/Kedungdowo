@@ -1,7 +1,7 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
     "content-hash": "76cddab93f5d7fe1264b1384119c8bbf",
@@ -55,9 +55,9 @@
             "authors": [
                 {
                     "name": "Denis Duliçi",
+                    "role": "Developer",
                     "email": "info@akaunting.com",
-                    "homepage": "https://akaunting.com",
-                    "role": "Developer"
+                    "homepage": "https://akaunting.com"
                 }
             ],
             "description": "Persistent settings package for Laravel.",
