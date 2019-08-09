@@ -22,6 +22,6 @@ return [
 
     // name => directory path, relative with stubs directory or absolute path
     'templates'  => [
-        'laravolt' => 'laravolt',
+        'laravolt' => base_path('stubs/default'),
     ],
 ];

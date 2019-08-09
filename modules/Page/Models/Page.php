@@ -16,5 +16,5 @@ class Page extends Model
 
     protected $guarded = [];
 
-    protected $searchableColumns = ["name", "short", "desc", "created_by", "updated_by", "published",];
+    protected $searchableColumns = ["name", "slug", "short", "desc", "created_by", "updated_by", "published",];
 }

@@ -2,7 +2,7 @@
 
 namespace Modules\Page\Http\Requests;
 
-use Illuminate\Foundation\Http\FormRequest;
+use Modules\Category\Models\Category;
 
 class Update extends Store
 {
@@ -13,15 +13,27 @@ class Update extends Store
      */
     public function rules()
     {
-        return [
-            'name' => ['required'],
-            'short' => ['required'],
-            'desc' => ['required'],
-            'created_by' => ['required'],
-            'updated_by' => ['required'],
-            'published' => ['required'],
-            'category_id' => ['required'],
+        $category = strtolower(Category::find($this->category_id)->title);
+
+        $rules = [
+            'category_id' => 'required',
+            'title' => 'required|max:191|unique:pages,title,' . $this->page->id,
+            'description' => 'sometimes|max:8000',
+            'short_desc' => 'sometimes|max:400',
+            'published' => 'sometimes',
         ];
+
+        if (strpos($category, 'galeri') !== false &&
+            (in_array($this['fileuploader-list-uploads'], ['[]', null]) && ! $this->uploads)) {
+            $rules['foto'] = 'required';
+        }
+
+        if (strpos($category, 'slideshow') !== false &&
+            (in_array($this['fileuploader-list-uploads'], ['[]', null]) && ! $this->uploads)) {
+            $rules['slideshow'] = 'required';
+        }
+
+        return $rules;
     }
 
     /**

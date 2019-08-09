@@ -10,6 +10,57 @@
 
     <link rel="stylesheet" type="text/css" href="{{ mix('semantic/semantic.min.css', 'laravolt') }}"/>
     <link rel="stylesheet" type="text/css" href="{{ mix('css/all.css', 'laravolt') }}"/>
+    <style>
+        .full-width {
+            width: 100% !important;
+        }
+
+        * {
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+
+        .clap-header {
+            background-color: #f5f6fa !important;
+        }
+
+        .p-20 {
+            padding: 20px;
+        }
+
+        .middle-align {
+            vertical-align: middle;
+        }
+
+        .float-right {
+            float: right !important;
+        }
+
+        .no-border {
+            background: none !important;
+            padding: 0px !important;
+            border: none !important;
+        }
+
+        .ui.blue.button, .ui.red.buttons .button {
+            background-color: #ff6565;
+            font-family: 'Source Sans Pro', sans-serif !important;
+        }
+
+        .ui.blue.button:hover, .ui.red.buttons .button:hover {
+            background-color: #ff6565;
+            font-family: 'Source Sans Pro', sans-serif !important;
+        }
+
+        .ui.blue.button, .ui.blue.buttons .button {
+            background-color: #3b86ff;
+            font-family: 'Source Sans Pro', sans-serif !important;
+        }
+
+        .ui.blue.button:hover, .ui.blue.buttons .button:hover {
+            background-color: #1062e5;
+            font-family: 'Source Sans Pro', sans-serif !important;
+        }
+    </style>
     @stack('style')
     @stack('head')
     {!! Assets::group('laravolt')->css() !!}

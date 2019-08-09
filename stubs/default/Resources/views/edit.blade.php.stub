@@ -1,0 +1,27 @@
+@extends('ui::layouts.app')
+
+@section('content')
+  <div class="ui secondary menu">
+    <div class="menu full-width">
+      <div class="item float-left" style="padding-left: 0px;">
+        <h1 style="font-weight: normal">Edit :Module Name:</h1>
+      </div>
+    </div>
+  </div>
+
+  <div class="ui card full-width">
+    <div class="content">
+      {!! form()->bind($:moduleName:)->put(route(':moduleName:.update', $:moduleName:->getKey()))->multipart() !!}
+      :FORM_CREATE_FIELDS:
+
+      <div class="float-right">
+        {!! form()->action([
+          form()->link('Batal', route(':moduleName:.index'))->addClass('ui red button'),
+          form()->submit('Simpan')->addClass('ui blue button')
+        ]) !!}
+      </div>
+
+      {!! form()->close() !!}
+    </div>
+  </div>
+@stop
