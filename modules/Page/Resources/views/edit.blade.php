@@ -21,6 +21,8 @@
 	{!! form()->textarea('desc')->label('Desc') !!}
 	{!! form()->text('created_by')->label('Created by') !!}
 	{!! form()->text('updated_by')->label('Updated by') !!}
+	{!! form()->text('published')->label('Published') !!}
+	{!! form()->text('category_id')->label('Category') !!}
     {!! form()->action([
         form()->submit('Save'),
         form()->link('Cancel', route('page.index'))

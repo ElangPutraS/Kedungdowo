@@ -18,6 +18,8 @@ class IndexTableView extends TableView
             Text::make('desc')->sortable(),
             Text::make('created_by')->sortable(),
             Text::make('updated_by')->sortable(),
+            Text::make('published')->sortable(),
+            Text::make('category_id')->sortable(),
             RestfulButton::make('page'),
         ];
     }

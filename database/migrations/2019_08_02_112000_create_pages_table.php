@@ -20,7 +20,9 @@ class CreatePagesTable extends Migration
             $table->longText('desc');
             $table->string('created_by');
             $table->string('updated_by');
+            $table->boolean('published');
             $table->timestamp('deleted_at');
+            $table->bigInteger('category_id');
             $table->timestamps();
         });
     }
