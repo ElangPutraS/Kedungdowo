@@ -2,8 +2,6 @@
 
 @push('style')
 <style>
-@import 'https://fonts.googleapis.com/css?family=Ubuntu:300, 400, 500, 700';
-
 *, *:after, *:before {
   margin: 0;
   padding: 0;
@@ -36,12 +34,6 @@
   right: 0;
   left: 0;
   z-index: -1;
-}
-
-bg {
-    background-image: url("img/pantai.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 
 svg {
@@ -99,46 +91,778 @@ small {
     color: inherit;
   }
 }
+
+.container{
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.slider-wrapper {
+    width: 600px;
+    height: 300px;
+    background: #000;
+    overflow: hidden;
+}
+
+.inner-wrapper {
+    width: 500%;
+    height: 100%;
+    position: relative;
+    left: -100%;
+}
+
+
+.slide {
+    width: calc(100%/5);
+    height: 100%;
+    background: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 100px;
+    font-weight: 700;
+    float: left;
+}
+
+.button {
+    width: 30px;
+    height: 30px;
+    border-top: 2px solid black;
+    position: absolute;
+    cursor: pointer;
+
+}
+
+.prev {
+    border-left: 2px solid black;
+    left: 100px;
+    transform: rotate(-45deg);
+}
+.desc{
+    font-size: 20px;
+}
+
+.next {
+    border-right: 2px solid black;
+    right: 100px;
+    transform: rotate(45deg);
+}
+
+@import url(https://fonts.googleapis.com/css?family=Lora|Roboto:400,500);
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    text-rendering: optimizeLegibility;
+    font-variant-ligatures: none;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    background-color: #fafafa;
+}
+body::before,
+body::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+body * {
+    box-sizing: inherit;
+}
+p, h1 {
+    margin: 0; padding: 0;
+}
+
+body, .text-light-black {
+    color: rgba(0,0,0,0.6);
+}
+.text-black {
+    color: rgba(0,0,0,0.9);
+}
+.text-muted {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+.ff-serif {
+    font-family: 'Lora', serif;
+}
+
+.font-weight-normal {
+    font-weight: normal;
+}
+.font-weight-medium {
+    font-weight: 500;
+}
+.lts-2px {
+    letter-spacing: 2px;
+}
+
+.text-center {
+    text-align: center;
+}
+.d-inline-block {
+    display: inline-block;
+}
+
+.p-relative {
+    position: relative;
+}
+
+
+
+.bg-white {
+    background-color: #fff;
+}
+
+
+
+
+
+
+.small {
+    font-size: 0.75rem;
+}
+.card-heading {
+    font-size: 2.25rem;
+}
+.styled-link {
+    text-decoration: none;
+    outline: none;
+    color: #2196fe;
+    transition: all 0.25s ease-in;
+}
+.styled-link:hover,
+.styled-link:focus,
+.styled-link:active {
+    color: #536dfe;
+}
+.shadow-1 {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.15);
+}
+.blue-hover {
+    transition: all 0.25s ease-in;
+    border-bottom: 5px solid transparent;
+}
+.blue-hover:hover {
+    transform: translateY(-5px);
+    border: none;
+    border-bottom: 5px solid #2196fe;
+}
+.red-hover {
+    transition: all 0.25s ease-in;
+    border-bottom: 5px solid transparent;
+}
+.red-hover:hover {
+    transform: translateY(-5px);
+    border: none;
+    border-bottom: 5px solid #bf0404;
+}
+/**Margin and padding utilities*/
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+.my-2 {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.mt-0 {
+    margin-top: 0;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}
+.mb-1 {
+    margin-bottom: 1rem;
+}
+.mb-2 {
+    margin-bottom: 2rem;
+}
+.ml-2 {
+    margin-left: 2rem;
+}
+.px-2 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+.py-2 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+
+* {
+    font-family: Open Sans;
+}
+
+section {
+    width: 100%;
+    display: inline-block;
+    background: #333;
+    height: 50vh;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.footer-distributed{
+    background: #666;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    text-align: left;
+    font: bold 16px sans-serif;
+    padding: 55px 50px;
+}
+
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+    display: inline-block;
+    vertical-align: top;
+}
+
+/* Footer left */
+
+.footer-distributed .footer-left{
+    width: 40%;
+}
+
+/* The company logo */
+
+.footer-distributed h3{
+    color:  #ffffff;
+    font: normal 36px 'Open Sans', cursive;
+    margin: 0;
+}
+
+.footer-distributed h3 span{
+    color:  lightseagreen;
+}
+
+/* Footer links */
+
+.footer-distributed .footer-links{
+    color:  #ffffff;
+    margin: 20px 0 12px;
+    padding: 0;
+}
+
+.footer-distributed .footer-links a{
+    display:inline-block;
+    line-height: 1.8;
+    font-weight:400;
+    text-decoration: none;
+    color:  inherit;
+}
+
+.footer-distributed .footer-company-name{
+    color:  #222;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/* Footer Center */
+
+.footer-distributed .footer-center{
+    width: 35%;
+}
+
+.footer-distributed .footer-center i{
+    background-color:  #33383b;
+    color: #ffffff;
+    font-size: 25px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 42px;
+    margin: 10px 15px;
+    vertical-align: middle;
+}
+
+.footer-distributed .footer-center i.fa-envelope{
+    font-size: 17px;
+    line-height: 38px;
+}
+
+.footer-distributed .footer-center p{
+    display: inline-block;
+    color: #ffffff;
+    font-weight:400;
+    vertical-align: middle;
+    margin:0;
+}
+
+.footer-distributed .footer-center p span{
+    display:block;
+    font-weight: normal;
+    font-size:14px;
+    line-height:2;
+}
+
+.footer-distributed .footer-center p a{
+    color:  lightseagreen;
+    text-decoration: none;;
+}
+
+.footer-distributed .footer-links a:before {
+    content: "|";
+    font-weight:300;
+    font-size: 20px;
+    left: 0;
+    color: #fff;
+    display: inline-block;
+    padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+    content: none;
+}
+
+/* Footer Right */
+
+.footer-distributed .footer-right{
+    width: 20%;
+}
+
+.footer-distributed .footer-company-about{
+    line-height: 20px;
+    color:  #92999f;
+    font-size: 13px;
+    font-weight: normal;
+    margin: 0;
+}
+
+.footer-distributed .footer-company-about span{
+    display: block;
+    color:  #ffffff;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-distributed .footer-icons{
+    margin-top: 25px;
+}
+
+.footer-distributed .footer-icons a{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    background-color:  #33383b;
+    border-radius: 2px;
+
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 35px;
+
+    margin-right: 3px;
+    margin-bottom: 5px;
+}
+
+/* If you don't want the footer to be responsive, remove these media queries */
+
+@media (max-width: 880px) {
+
+    .footer-distributed{
+        font: bold 14px sans-serif;
+    }
+
+    .footer-distributed .footer-left,
+    .footer-distributed .footer-center,
+    .footer-distributed .footer-right{
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    .footer-distributed .footer-center i{
+        margin-left: 0;
+    }
+
+}
+
+
 </style>
 @endpush
 
+
+@section('content')
+
+    <div class="bg">
+        <div class="ui stackable menu">
+            <div class="item">
+                <img src="{{ asset('img/kdap.jpg') }}">
+            </div>
+            <a class="item active">Home</a>
+            <a class="item">Contact Us</a>
+            <a class="item">About Us</a>
+        </div>
+        <div class="svg-container">
+            <!-- I crated SVG with: https://codepen.io/anthonydugois/pen/mewdyZ -->
+            <svg viewbox="0 0 800 400" class="svg">
+              <path id="curve" fill="#fc0303" d="M 800 300 Q 400 350 0 300 L 0 0 L 800 0 L 800 300 Z">
+              </path>
+            </svg>
+        </div>
+
+        <header>
+            <h1 class="ml10">
+                <span class="text-wrapper">
+                    <span class="letters">Selamat Datang di Desa Kedungdowo</span>
+                </span>
+            </h1>
+        </header>
+
+        <!------ Include the above in your HEAD tag ---------->
+
+
+        <div class="ui segment">
+            <div class="ui two column very relaxed grid">
+                <div class="column center aligned">
+                    <iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY">
+                    </iframe>
+                </div>
+                <div class="column">
+                    <p class="desc">Berdasarkan video yang berada di Classroom, information extraction dapat memudahkan mahasiswa dalam </p>
+                    <p class="desc">membuat pengingat/alarm ataupun memasukkan to-do list masing-masing terkait deadline tugas ataupun </p>
+                    <p class="desc">task lainnya yang berkaitan dengan kegiatan di kampus. Dan juga dapat membantu ketika sedang melakukan </p>
+                    <p class="desc">penelitian untuk mendapatkan beberapa artikel ilmiah yang sesuai dengan topik atau judul yang diambil </p>
+                    <p class="desc">oleh mahasiswa.</p>
+                </div>
+                <div class="ui hidden divider"></div>
+            </div>
+        </div>
+
+        <div class="ui segment center aligned">
+            <h2>Daya Tarik Utama Kami</h2>
+            <div class="ui three column grid">
+                <div class="column">
+                    <a href="https://kedungdowopark.wordpress.com">
+                    <div class="ui fluid card">
+                        <div class="image">
+                            <img src="{{asset('img/kdap.jpg')}}">
+                        </div>
+                        <div class="content">
+                            <div class="header">
+                                Kedungdowo Adventure Park
+                            </div>
+                        </div>
+                    </div></a>
+                </div>
+                <div class="column">
+                    <div class="ui fluid card">
+                        <div class="image">
+                            <img src="/images/avatar/large/helen.jpg">
+                        </div>
+                        <div class="content">
+                            <a class="header">Helen Troy</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui fluid card">
+                        <div class="image">
+                            <img src="/images/avatar/large/elliot.jpg">
+                        </div>
+                        <div class="content">
+                            <a class="header">Elliot Fu</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ui segment">
+            <div class="container">
+                <h2>Seputar Desa Kedungdowo</h2>
+                <div class="slider-wrapper">
+
+                    <div class="inner-wrapper">
+                        <div class="slide">
+                            1
+                        </div>
+                        <div class="slide">
+                            2
+                        </div>
+                        <div class="slide">3</div>
+                        <div class="slide">4</div>
+                        <div class="slide">5</div>
+                    </div>
+                </div>
+
+                <h3><a href="#Gallery">View More</a></h3>
+
+                <div class="button prev"></div>
+                <div class="button next"></div>
+
+            </div>
+        </div>
+
+        <div class="ui segment">
+            <h2 style="margin-left: 50px; margin-top: 15px; color: #0d71bb">Berita Terbaru</h2>
+            <div class="ui three column grid">
+                <div class="column">
+                    <div class="my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 360px; overflow: hidden; border-radius: 1px;">
+                        <img class="ui large image" src="{{ asset('img/kdap1.jpg') }}" />
+
+                        <div class="px-2 py-2">
+
+                            <h1 class="ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
+                                Planning your final summer trip
+                            </h1>
+
+                            <p class="mb-1">
+                                Summer is coming to a close just around the corner. But it's not too late to squeeze in another weekend trip &hellip;
+                            </p>
+
+                        </div>
+
+                        <a href="#0" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+                            Read More
+                        </a>
+
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 360px; overflow: hidden; border-radius: 1px;">
+                        <img class="ui large image" src="{{ asset('img/kdap1.jpg') }}" />
+
+                        <div class="px-2 py-2">
+
+                            <h1 class="ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
+                                Planning your final summer trip
+                            </h1>
+
+                            <p class="mb-1">
+                                Summer is coming to a close just around the corner. But it's not too late to squeeze in another weekend trip &hellip;
+                            </p>
+
+                        </div>
+
+                        <a href="#0" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+                            Read More
+                        </a>
+
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 360px; overflow: hidden; border-radius: 1px;">
+                        <img class="ui large image" src="{{ asset('img/kdap1.jpg') }}" />
+
+                        <div class="px-2 py-2">
+
+                            <h1 class="ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
+                                Planning your final summer trip
+                            </h1>
+
+                            <p class="mb-1">
+                                Summer is coming to a close just around the corner. But it's not too late to squeeze in another weekend trip &hellip;
+                            </p>
+
+                        </div>
+
+                        <a href="#0" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+                            Read More
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ui segment">
+            <h2 style="margin-left: 50px; margin-top: 15px; color: #9c1a1a">Produk Kami</h2>
+            <div class="ui three column grid">
+                <div class="column">
+                    <div class="my-2 mx-auto p-relative bg-white shadow-1 red-hover" style="width: 360px; overflow: hidden; border-radius: 1px;
+                    align-items: center">
+                        <img style="width: 200px; height: 200px; border-radius: 50%;margin-left: 80px; margin-top: 10px" class="ui large image"
+                             src="{{ asset('img/kdap1.jpg') }}" />
+
+                        <div class="px-2 py-2">
+                            <h1 class="ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
+                                Planning your final summer trip
+                            </h1>
+
+                            <p class="mb-1">
+                                Summer is coming to a close just around the corner. But it's not too late to squeeze in another weekend trip &hellip;
+                            </p>
+
+                        </div>
+
+                        <a href="#0" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+                            Read More
+                        </a>
+
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="my-2 mx-auto p-relative bg-white shadow-1 red-hover" style="width: 360px; overflow: hidden; border-radius: 1px;
+                    align-items: center">
+                        <img style="width: 200px; height: 200px; border-radius: 50%;margin-left: 80px; margin-top: 10px" class="ui large image"
+                             src="{{ asset('img/kdap1.jpg') }}" />
+
+                        <div class="px-2 py-2">
+                            <h1 class="ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
+                                Planning your final summer trip
+                            </h1>
+
+                            <p class="mb-1">
+                                Summer is coming to a close just around the corner. But it's not too late to squeeze in another weekend trip &hellip;
+                            </p>
+
+                        </div>
+
+                        <a href="#0" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+                            Read More
+                        </a>
+
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="my-2 mx-auto p-relative bg-white shadow-1 red-hover" style="width: 360px; overflow: hidden; border-radius: 1px;
+                    align-items: center">
+                        <img style="width: 200px; height: 200px; border-radius: 50%;margin-left: 80px; margin-top: 10px" class="ui large image"
+                             src="{{ asset('img/kdap1.jpg') }}" />
+
+                        <div class="px-2 py-2">
+                            <h1 class="ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
+                                Planning your final summer trip
+                            </h1>
+
+                            <p class="mb-1">
+                                Summer is coming to a close just around the corner. But it's not too late to squeeze in another weekend trip &hellip;
+                            </p>
+
+                        </div>
+
+                        <a href="#0" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
+                            Read More
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer-distributed">
+
+            <div class="footer-left">
+
+                <h3>Company<span>logo</span></h3>
+
+                <p class="footer-links">
+                    <a href="#" class="link-1">Home</a>
+
+                    <a href="#">About</a>
+
+                    <a href="#">Contact</a>
+                </p>
+
+                <p class="footer-company-name">Company Name © 2015</p>
+            </div>
+
+            <div class="footer-center">
+
+                <div>
+                    <i class="map marker alternate icon"></i>
+                    <p><span>444 S. Cedros Ave</span> Solana Beach, California</p>
+                </div>
+
+                <div>
+                    <i class="phone icon"></i>
+                    <p>+1.555.555.5555</p>
+                </div>
+
+                <div>
+                    <i class="envelope icon"></i>
+                    <p><a href="mailto:support@company.com">support@company.com</a></p>
+                </div>
+
+            </div>
+
+            <div class="footer-right">
+                <h4>Kepala Desa</h4>
+                <img style="width: 100px; height: 100px; border-radius: 50%" src="{{asset('img/kdap.jpg')}}">
+                <h5>Tumbar Sudarso</h5>
+
+                <div class="footer-icons">
+
+                    <a href="#"><i class="facebook icon"></i></a>
+                    <a href="#"><i class="twitter icon"></i></a>
+                    <a href="#"><i class="linkedin icon"></i></a>
+                    <a href="#"><i class="github icon"></i></a>
+
+                </div>
+
+            </div>
+
+        </footer>
+    </div>
+
+@endsection
+
 @push('script')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
     <script>
-        (function() {
-          // Variables
-          var $curve = document.getElementById("curve");
-          var last_known_scroll_position = 0;
-          var defaultCurveValue = 350;
-          var curveRate = 3;
-          var ticking = false;
-          var curveValue;
+        $('.special.cards .image').dimmer({
+            on: 'hover'
+        });
+        $(document).ready(function() {
+            // Variables
+            var $curve = document.getElementById("curve");
+            var last_known_scroll_position = 0;
+            var defaultCurveValue = 350;
+            var curveRate = 3;
+            var ticking = false;
+            var curveValue;
 
-          // Handle the functionality
-          function scrollEvent(scrollPos) {
-            if (scrollPos >= 0 && scrollPos < defaultCurveValue) {
-              curveValue = defaultCurveValue - parseFloat(scrollPos / curveRate);
-              $curve.setAttribute(
-                "d",
-                "M 800 300 Q 400 " + curveValue + " 0 300 L 0 0 L 800 0 L 800 300 Z"
-              );
-            }
-          }
-
-          // Scroll Listener
-          // https://developer.mozilla.org/en-US/docs/Web/Events/scroll
-          window.addEventListener("scroll", function(e) {
-            last_known_scroll_position = window.scrollY;
-
-            if (!ticking) {
-              window.requestAnimationFrame(function() {
-                scrollEvent(last_known_scroll_position);
-                ticking = false;
-              });
+            // Handle the functionality
+            function scrollEvent(scrollPos) {
+                if (scrollPos >= 0 && scrollPos < defaultCurveValue) {
+                    curveValue = defaultCurveValue - parseFloat(scrollPos / curveRate);
+                    $curve.setAttribute(
+                        "d",
+                        "M 800 300 Q 400 " + curveValue + " 0 300 L 0 0 L 800 0 L 800 300 Z"
+                    );
+                }
             }
 
-            ticking = true;
-          });
-        })();
+            // Scroll Listener
+            // https://developer.mozilla.org/en-US/docs/Web/Events/scroll
+            window.addEventListener("scroll", function(e) {
+                last_known_scroll_position = window.scrollY;
+
+                if (!ticking) {
+                    window.requestAnimationFrame(function() {
+                        scrollEvent(last_known_scroll_position);
+                        ticking = false;
+                    });
+                }
+
+                ticking = true;
+            });
+        });
 
         var textWrapper = document.querySelector('.ml10 .letters');
         textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
@@ -158,87 +882,56 @@ small {
             easing: "easeOutExpo",
             delay: 1000
         });
+
+
+
+        $(function() {
+
+            var inWrap = $('.inner-wrapper'),
+                $slide = $('.slide');
+
+
+            function slideNext() {
+
+                inWrap.animate({left: '-200%'}, 200, function() {
+
+                    inWrap.css('left', '-100%');
+
+                    $('.slide').last().after($('.slide').first());
+
+                });
+
+            }
+
+
+            //Enabling auto scroll
+            sliderInterval = setInterval(slideNext, 5000);
+
+
+
+            $('.prev').on('click', function() {
+
+                inWrap.animate({left: '0%'}, 200, function() {
+
+                    inWrap.css('left', '-100%');
+
+                    $('.slide').first().before($('.slide').last());
+
+                });
+            });
+
+
+            $('.next').on('click', function() {
+
+                clearInterval(sliderInterval);
+
+                slideNext();
+
+            });
+
+
+        });
     </script>
 
 
 @endpush
-@section('content')
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-    <div class="bg">
-        <div class="svg-container">
-            <!-- I crated SVG with: https://codepen.io/anthonydugois/pen/mewdyZ -->
-            <svg viewbox="0 0 800 400" class="svg">
-              <path id="curve" fill="#50c6d8" d="M 800 300 Q 400 350 0 300 L 0 0 L 800 0 L 800 300 Z">
-              </path>
-            </svg>
-          </div>
-
-         <header>
-            <h1 class="ml10">
-                <span class="text-wrapper">
-                    <span class="letters">Selamat Datang di Desa Kedungdowo</span>
-                </span>
-            </h1>
-         </header>
-
-          <div class="ui segment">
-              <main>
-                <h2>Seputar Sejarah Kedungdowo.</h2>
-                <img src="img/kedung.jpg">
-                <h4 style="align-items:center">Tes dulu boy</h4>
-              </main>
-          </div>
-
-          <div class="ui hidden divider"> </div>
-
-          <div class="ui segment">
-            <div class="ui two column very relaxed grid">
-                <div class="column">
-                  <main>
-                    <iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY">
-                    </iframe>
-                  </main>
-                </div>
-                <div class="column">
-                    <main>
-                        <p>Berdasarkan video yang berada di Classroom, information extraction dapat memudahkan mahasiswa dalam </p>
-                        <p>membuat pengingat/alarm ataupun memasukkan to-do list masing-masing terkait deadline tugas ataupun </p>
-                        <p>task lainnya yang berkaitan dengan kegiatan di kampus. Dan juga dapat membantu ketika sedang melakukan </p>
-                        <p>penelitian untuk mendapatkan beberapa artikel ilmiah yang sesuai dengan topik atau judul yang diambil </p>
-                        <p>oleh mahasiswa.</p>
-                    </main>
-                </div>
-                <div class="ui hidden divider"></div>
-            </div>
-          </div>
-
-          <div class="ui segment">
-
-            <h2 style="position: relative; text-align: center"> Perangkat Desa </h2>
-            <div class="ui hidden divider"></div>
-
-            <div class="ui link cards">
-                <div class="card">
-                    <div class="image">
-                        <img src="">
-                    </div>
-                    <div class="content" >
-                        <div class="header"> Tumbar Sudarso </div>
-                        <div class="meta">
-                            <a>Kepala Desa Kedungdowo</a>
-                        </div>
-                        <div class="description">
-                            "Saya merasa bangga menjadi kepala desa dari Desa Kedungdowo ini"
-                        </div>
-                    </div>
-                    <div class="extra content">
-                        <span class="right floated">
-                         Menjabat Sejak 2019
-                        </span>
-                    </div>
-                </div>
-            </div>
-          </div>
-    </div>
-@endsection
