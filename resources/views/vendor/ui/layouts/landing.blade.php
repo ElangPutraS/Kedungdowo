@@ -7,7 +7,7 @@
 
     <div class="content">
         <div class="content__inner">
-            <div class="ui container-fluid content__body p-1">
+            <div style="margin-top: 0" class="ui container-fluid content__body p-1">
                 @yield('content')
             </div>
 
