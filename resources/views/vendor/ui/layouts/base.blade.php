@@ -70,6 +70,7 @@
 
 <body data-theme="{{ config('laravolt.ui.sidebar_theme') }}" class="{{ $bodyClass ?? '' }}">
 
+@include('landing.header')
 @yield('body')
 @include('landing.footer')
 

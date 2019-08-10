@@ -19,7 +19,7 @@
 
         <div>
             <i class="map marker alternate icon"></i>
-            <p><span>444 S. Cedros Ave</span> Solana Beach, California</p>
+            <p><span>Desa Kedungdowo</span> Kecamatan Poncowarno, Kabupaten Kebumen</p>
         </div>
 
         <div>
@@ -35,9 +35,9 @@
     </div>
 
     <div class="footer-right">
-        <h4>Kepala Desa</h4>
+        <h4 style="color: #fefefe">Kepala Desa</h4>
         <img style="width: 100px; height: 100px; border-radius: 50%" src="{{asset('img/kdap.jpg')}}">
-        <h5>Tumbar Sudarso</h5>
+        <h5 style="color: #fefefe">Tumbar Sudarso</h5>
 
         <div class="footer-icons">
 

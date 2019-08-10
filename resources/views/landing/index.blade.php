@@ -51,7 +51,7 @@ h3 {
 }
 
 header {
-  color: #fff;
+  color: #000;
   padding-top: 10vw;
   padding-bottom: 30vw;
   text-align: center;
@@ -501,7 +501,16 @@ section {
 
 }
 
-
+.back-ground{
+    position: relative;
+    height: 500px;
+    background-image: url("{{asset('img/pantai.jpg')}}");
+    background-repeat: no-repeat;
+    border-bottom-left-radius: 50% 20%;
+    border-bottom-right-radius: 50% 20%;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
 </style>
 @endpush
 
@@ -509,34 +518,11 @@ section {
 @section('content')
 
     <div class="bg">
-        <div class="ui stackable menu">
-            <div class="item">
-                <img src="{{ asset('img/kdap.jpg') }}">
-            </div>
-            <a class="item active">Home</a>
-            <a class="item">Contact Us</a>
-            <a class="item">About Us</a>
-        </div>
-        <div class="svg-container">
-            <!-- I crated SVG with: https://codepen.io/anthonydugois/pen/mewdyZ -->
-            <svg viewbox="0 0 800 400" class="svg">
-              <path id="curve" fill="#fc0303" d="M 800 300 Q 400 350 0 300 L 0 0 L 800 0 L 800 300 Z">
-              </path>
-            </svg>
-        </div>
-
-        <header>
-            <h1 class="ml10">
-                <span class="text-wrapper">
-                    <span class="letters">Selamat Datang di Desa Kedungdowo</span>
-                </span>
-            </h1>
-        </header>
-
         <!------ Include the above in your HEAD tag ---------->
 
 
         <div class="ui segment">
+            <h2>Teaser Tentang Kedungdowo</h2>
             <div class="ui two column very relaxed grid">
                 <div class="column center aligned">
                     <iframe width="420" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY">
@@ -572,20 +558,20 @@ section {
                 <div class="column">
                     <div class="ui fluid card">
                         <div class="image">
-                            <img src="/images/avatar/large/helen.jpg">
+                            <img src="{{asset('img/kdap.jpg')}}">
                         </div>
                         <div class="content">
-                            <a class="header">Helen Troy</a>
+                            <a class="header">Kuda Kepang</a>
                         </div>
                     </div>
                 </div>
                 <div class="column">
                     <div class="ui fluid card">
                         <div class="image">
-                            <img src="/images/avatar/large/elliot.jpg">
+                            <img src="{{asset('img/kdap.jpg')}}">
                         </div>
                         <div class="content">
-                            <a class="header">Elliot Fu</a>
+                            <a class="header">Nyadran</a>
                         </div>
                     </div>
                 </div>
@@ -594,7 +580,7 @@ section {
 
         <div class="ui segment">
             <div class="container">
-                <h2>Seputar Desa Kedungdowo</h2>
+                <h2>Galeri Desa Kedungdowo</h2>
                 <div class="slider-wrapper">
 
                     <div class="inner-wrapper">
@@ -668,7 +654,6 @@ section {
                 <div class="column">
                     <div class="my-2 mx-auto p-relative bg-white shadow-1 blue-hover" style="width: 360px; overflow: hidden; border-radius: 1px;">
                         <img class="ui large image" src="{{ asset('img/kdap1.jpg') }}" />
-
                         <div class="px-2 py-2">
 
                             <h1 class="ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
@@ -684,7 +669,6 @@ section {
                         <a href="#0" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
                             Read More
                         </a>
-
                     </div>
                 </div>
             </div>
@@ -713,7 +697,6 @@ section {
                         <a href="#0" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
                             Read More
                         </a>
-
                     </div>
                 </div>
                 <div class="column">
@@ -736,7 +719,6 @@ section {
                         <a href="#0" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
                             Read More
                         </a>
-
                     </div>
                 </div>
                 <div class="column">
@@ -759,11 +741,48 @@ section {
                         <a href="#0" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
                             Read More
                         </a>
-
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="ui segment">
+            <h2>Feedback Pengunjung</h2>
+            <div class="ui cards">
+                <div class="card">
+                    <div class="content">
+                        <img class="ui tiny left floated image" src="{{asset('img/kdap.jpg')}}" style="border-radius: 50%">
+                        <div class="header">Elliot Fu</div>
+                        <div class="meta">Friend</div>
+                        <div class="description">
+                            Elliot Fu is a film-maker from New York.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="content">
+                        <img class="ui tiny left floated image" src="{{asset('img/kdap.jpg')}}" style="border-radius: 50%">
+                        <div class="header">Veronika Ossi</div>
+                        <div class="meta">Friend</div>
+                        <div class="description">
+                            Veronika Ossi is a set designer living in New York who enjoys kittens, music, and partying.
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="content">
+                        <img class="ui tiny left floated image" src="{{asset('img/kdap.jpg')}}" style="border-radius: 50%">
+                        <div class="header">Jenny Hess</div>
+                        <div class="meta">Friend</div>
+                        <div class="description">
+                            Jenny is a student studying Media Management at the New School
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </div>
 
 @endsection
