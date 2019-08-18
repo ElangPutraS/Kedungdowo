@@ -37,7 +37,9 @@
             <div class="ui dropdown search selection">
                 <select name="category_id" id="category_id" required="required" class="noselection">
                     <option value="">-- Pilih Kategori --</option>
+                    @if(! empty(json_decode(setting()->get('List Category'))))
                     @each('partials.option', json_decode(setting()->get('List Category')), 'row', '')
+                    @endif
                 </select><i class="dropdown icon"></i><input class="search" autocomplete="off" tabindex="0">
                 <div class="default text">-- Pilih Kategori --</div>
                 <div class="menu" tabindex="-1" style="max-height: 100px !important;">
