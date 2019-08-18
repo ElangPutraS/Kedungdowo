@@ -1,4 +1,4 @@
-@extends('ui::layouts.base')
+@extends('ui::layouts.base-landing')
 
 @section('body')
 <div class="layout--app">

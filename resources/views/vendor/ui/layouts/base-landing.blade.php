@@ -70,7 +70,9 @@
 
 <body data-theme="{{ config('laravolt.ui.sidebar_theme') }}" class="{{ $bodyClass ?? '' }}">
 
+@include('landing.header')
 @yield('body')
+@include('landing.footer')
 
 <script type="text/javascript" src="{{ mix('js/all.js', 'laravolt') }}"></script>
 {!! Assets::group('laravolt')->js() !!}

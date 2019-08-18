@@ -14,6 +14,7 @@
 }
 
 .ml10 .text-wrapper {
+    color: white;
     position: relative;
     display: inline-block;
     padding-top: 0.2em;
@@ -504,8 +505,8 @@ section {
 .back-ground{
     position: relative;
     height: 500px;
-    background-image: url("{{asset('img/pantai.jpg')}}");
-    background-repeat: no-repeat;
+    background-image: url("{{asset('img/kdap1.jpg')}}");
+    background-repeat: round;
     border-bottom-left-radius: 50% 20%;
     border-bottom-right-radius: 50% 20%;
     margin-top: 0;

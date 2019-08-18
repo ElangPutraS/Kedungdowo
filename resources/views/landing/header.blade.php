@@ -10,9 +10,9 @@
 
     <header>
         <h1 class="ml10">
-                <span class="text-wrapper">
-                    <span class="letters">Selamat Datang di Desa Kedungdowo</span>
-                </span>
+            <span class="text-wrapper">
+                <span class="letters">Selamat Datang di Desa Kedungdowo</span>
+            </span>
         </h1>
     </header>
 </div>
