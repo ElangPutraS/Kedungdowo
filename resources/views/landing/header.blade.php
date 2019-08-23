@@ -3,9 +3,12 @@
         <div class="item">
             <img src="{{ asset('img/kdap.jpg') }}">
         </div>
-        <a class="item active">Home</a>
-        <a class="item">Contact Us</a>
-        <a class="item">About Us</a>
+        @if(! empty(json_decode(setting()->get('Home Portal'))))
+            @foreach(json_decode(setting()->get('Home Portal')) as $row)
+                @php $i = 0; @endphp
+                @include('partials.menu', ['row', $row])
+            @endforeach
+        @endif
     </div>
 
     <header>

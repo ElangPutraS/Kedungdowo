@@ -42,8 +42,8 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
             $parent = app('laravolt.menu');
 
             $parent
-                ->add('Category', ['route' => 'category.index'])
-                ->data('icon', 'circle outline')
+                ->add('Kategori', ['route' => 'category.index'])
+                ->data('icon', 'list')
                 ->active('category/*');
         }
     }
@@ -59,7 +59,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
             __DIR__.'/../Config/config.php' => config_path('category.php'),
         ], 'config');
         $this->mergeConfigFrom(
-            __DIR__.'/../Config/config.php', 
+            __DIR__.'/../Config/config.php',
             'category'
         );
     }

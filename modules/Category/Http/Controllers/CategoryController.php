@@ -35,7 +35,7 @@ class CategoryController extends Controller
         $request->request->set('parent_id', $request->parent_id == 0 ? null : $request->parent_id);
         Category::create($request->all());
 
-        return redirect()->route('category.index')->withSuccess('Kategori berhasil ditambah');
+        return redirect()->route('category.index')->withSuccess('Kategori berhasil disimpan.');
     }
 
     public function show(Category $category)
@@ -66,13 +66,13 @@ class CategoryController extends Controller
         $request->request->set('parent_id', $request->parent_id == 0 ? null : $request->parent_id);
         $category->update($request->all());
 
-        return redirect()->route('category.index')->withSuccess('Kategori berhasil diperbarui');
+        return redirect()->route('category.index')->withSuccess('Kategori berhasil diperbarui.');
     }
 
     public function destroy(Category $category)
     {
         $category->delete();
 
-        return redirect()->route('category.index')->withSuccess('Kategori berhasil dihapus');
+        return redirect()->route('category.index')->withSuccess('Kategori berhasil dihapus.');
     }
 }

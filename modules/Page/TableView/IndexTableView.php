@@ -3,9 +3,9 @@
 namespace Modules\Page\TableView;
 
 use Laravolt\Suitable\Columns\Numbering;
-use Laravolt\Suitable\Columns\RestfulButton;
 use Laravolt\Suitable\Columns\Text;
 use Laravolt\Suitable\TableView;
+use Modules\Page\Columns\PageButton;
 
 class IndexTableView extends TableView
 {
@@ -13,18 +13,14 @@ class IndexTableView extends TableView
     {
         return [
             Numbering::make('No')->setCellAttributes([
-                            'style' => 'background-color:white',
-                            'class' => 'ui center aligned'
+                'style' => 'background-color:white',
+                'class' => 'ui center aligned',
             ]),
-                        Text::make('title')->sortable(),
-            Text::make('slug')->sortable(),
-            Text::make('short_desc')->sortable(),
-            Text::make('description')->sortable(),
-            Text::make('created_by')->sortable(),
-            Text::make('updated_by')->sortable(),
-            Text::make('published')->sortable(),
-            Text::make('category_id')->sortable(),
-            RestfulButton::make('page')->except('view'),
+            Text::make('title', 'Judul')->sortable()->setHeaderAttributes(['width' => '300px']),
+            Text::make('slug', 'Slug')->sortable()->setHeaderAttributes(['width' => '300px']),
+            Text::make('category_title', 'Kategori'),
+            Text::make('status', 'Status'),
+            PageButton::make('page')->except('view'),
         ];
     }
 }

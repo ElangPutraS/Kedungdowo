@@ -167,9 +167,10 @@ return [
          * Package Service Providers...
          */
 
-//        Modules\Category\Providers\ServiceProvider::class,
-//        Modules\Menu\Providers\ServiceProvider::class,
-//        Modules\Page\Providers\ServiceProvider::class,
+        Modules\Category\Providers\ServiceProvider::class,
+        Modules\Menu\Providers\ServiceProvider::class,
+        Modules\Page\Providers\ServiceProvider::class,
+        Modules\Content\Providers\ServiceProvider::class,
 
         /*
          * Application Service Providers...

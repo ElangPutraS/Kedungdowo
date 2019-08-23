@@ -333,25 +333,31 @@ function cekForm (category) {
   }
 
   //Deskripsi Singkat Label
-  if (category.includes('berita')) {
-    $('.field-short *').attr('disabled', false);
-    $('.label-short').html('Deskripsi Singkat');
-    $('.field-short').show();
-  } else {
+  if (category.includes('galeri') || category.includes('testimoni') || category.includes('slideshow')) {
     $('.field-short *').attr('disabled', true);
     $('.field-short').hide();
+  } else {
+      $('.field-short *').attr('disabled', false);
+      $('.label-short').html('Deskripsi Singkat');
+      $('.field-short').show();
   }
+
+    //Deskripsi Label
+    if (category.includes('galeri') || category.includes('slideshow')) {
+        $('.field-description *').attr('disabled', true);
+        $('.field-description').hide();
+    } else {
+        $('.field-description *').attr('disabled', false);
+        $('.label-description').html('Deskripsi');
+        $('.field-description').show();
+    }
 
   //Upload File Label
   $('.upload-field *').attr('disabled', true);
   $('.upload-field').hide();
   $('.upload-field').removeClass('required');
 
-  if (category.includes('berita')) {
-    $('.field-cover *').attr('disabled', false);
-    $('.label-cover').html('Gambar Sampul');
-    $('.field-cover').show();
-  } else if (category.includes('galeri')) {
+  if (category.includes('galeri')) {
     $('.field-thumbnail *').attr('disabled', false);
     $('.upload-field').addClass('required');
     $('.field-thumbnail').show();
@@ -363,6 +369,10 @@ function cekForm (category) {
     $('.field-cover *').attr('disabled', false);
     $('.label-cover').html('Slideshow');
     $('.upload-field').addClass('required');
+    $('.field-cover').show();
+  } else {
+    $('.field-cover *').attr('disabled', false);
+    $('.label-cover').html('Gambar Sampul');
     $('.field-cover').show();
   }
 }

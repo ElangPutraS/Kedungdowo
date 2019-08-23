@@ -33,7 +33,7 @@ class MenuController extends Controller
         $request->request->set('parent_id', $request->parent_id == 0 ? null : $request->parent_id);
         Menu::create($request->all());
 
-        return redirect()->route('menu.index')->withSuccess('Menu berhasil ditambah');
+        return redirect()->route('menu.index')->withSuccess('Menu berhasil disimpan.');
     }
 
     public function show(Menu $menu)
@@ -60,13 +60,13 @@ class MenuController extends Controller
         $request->request->set('parent_id', $request->parent_id == 0 ? null : $request->parent_id);
         $menu->update($request->all());
 
-        return redirect()->route('menu.index')->withSuccess('Menu berhasil diperbarui');
+        return redirect()->route('menu.index')->withSuccess('Menu berhasil diperbarui.');
     }
 
     public function destroy(Menu $menu)
     {
         $menu->delete();
 
-        return redirect()->route('menu.index')->withSuccess('Menu berhasil dihapus');
+        return redirect()->route('menu.index')->withSuccess('Menu berhasil dihapus.');
     }
 }

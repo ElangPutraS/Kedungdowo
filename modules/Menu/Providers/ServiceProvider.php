@@ -43,7 +43,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
 
             $parent
                 ->add('Menu', ['route' => 'menu.index'])
-                ->data('icon', 'circle outline')
+                ->data('icon', 'th')
                 ->active('menu/*');
         }
     }
@@ -59,7 +59,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
             __DIR__.'/../Config/config.php' => config_path('menu.php'),
         ], 'config');
         $this->mergeConfigFrom(
-            __DIR__.'/../Config/config.php', 
+            __DIR__.'/../Config/config.php',
             'menu'
         );
     }

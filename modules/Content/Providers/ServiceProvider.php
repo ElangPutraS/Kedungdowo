@@ -1,6 +1,6 @@
 <?php
 
-namespace Modules\Page\Providers;
+namespace Modules\Content\Providers;
 
 use Illuminate\Database\Eloquent\Factory;
 
@@ -42,9 +42,9 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
             $parent = app('laravolt.menu');
 
             $parent
-                ->add('Halaman', ['route' => 'page.index'])
-                ->data('icon', 'file alternate outline')
-                ->active('page/*');
+                ->add('Konten', ['route' => 'content.index'])
+                ->data('icon', 'clipboard list outline')
+                ->active('content/*');
         }
     }
 
@@ -56,11 +56,11 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
     protected function bootConfig()
     {
         $this->publishes([
-            __DIR__.'/../Config/config.php' => config_path('page.php'),
+            __DIR__.'/../Config/config.php' => config_path('content.php'),
         ], 'config');
         $this->mergeConfigFrom(
             __DIR__.'/../Config/config.php',
-            'page'
+            'content'
         );
     }
 
@@ -71,7 +71,7 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
      */
     public function bootViews()
     {
-        $viewPath = resource_path('views/modules/page');
+        $viewPath = resource_path('views/modules/content');
 
         $sourcePath = __DIR__.'/../Resources/views';
 
@@ -80,8 +80,8 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
         ], 'views');
 
         $this->loadViewsFrom(array_merge(array_map(function ($path) {
-            return $path . '/modules/page';
-        }, \Config::get('view.paths')), [$sourcePath]), 'page');
+            return $path . '/modules/content';
+        }, \Config::get('view.paths')), [$sourcePath]), 'content');
     }
 
     /**
@@ -91,12 +91,12 @@ class ServiceProvider extends \Illuminate\Support\ServiceProvider
      */
     public function bootTranslations()
     {
-        $langPath = resource_path('lang/modules/page');
+        $langPath = resource_path('lang/modules/content');
 
         if (is_dir($langPath)) {
-            $this->loadTranslationsFrom($langPath, 'page');
+            $this->loadTranslationsFrom($langPath, 'content');
         } else {
-            $this->loadTranslationsFrom(__DIR__ .'/../Resources/lang', 'page');
+            $this->loadTranslationsFrom(__DIR__ .'/../Resources/lang', 'content');
         }
     }
 
