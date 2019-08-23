@@ -15,15 +15,21 @@
 
     <header style="color: white">
         <img src="http://localhost:8000/img/kdap.jpg" style="
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        margin-bottom: 20px;
-        ">
-        <h1>
-            DESA KEDUNGDOWO
-        </h1>
-        <h3>KECAMATAN PONCOWARNO KABUPATEN KEBUMEN</h3>
-
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            ">
+        @if(\Request::is('/'))
+            <h1>
+                DESA KEDUNGDOWO
+            </h1>
+            <h3>KECAMATAN PONCOWARNO KABUPATEN KEBUMEN</h3>
+        @elseif(! empty($list))
+            <h1 style="text-transform: uppercase">Daftar Kategori</h1>
+        @else
+            <h1 style="text-transform: uppercase">Contoh Judul</h1>
+        @endif
     </header>
+
 </div>

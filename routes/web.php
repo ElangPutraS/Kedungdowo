@@ -12,4 +12,5 @@
 */
 
 Route::get('/', 'LandingController@index');
+Route::view('contoh', 'landing.content');
 Route::get('home', 'Home')->name('home');

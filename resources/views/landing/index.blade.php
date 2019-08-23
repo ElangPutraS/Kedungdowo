@@ -153,8 +153,6 @@ small {
     transform: rotate(45deg);
 }
 
-@import url(https://fonts.googleapis.com/css?family=Lora|Roboto:400,500);
-
 body {
     margin: 0;
     padding: 0;
@@ -163,7 +161,7 @@ body {
     text-rendering: optimizeLegibility;
     font-variant-ligatures: none;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
     background-color: #fafafa;
 }
 body::before,
@@ -181,12 +179,6 @@ p, h1 {
 
 body, .text-light-black {
     color: rgba(0,0,0,0.6);
-}
-
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
-
-* {
-    font-family: Open Sans;
 }
 
 section {
@@ -227,7 +219,7 @@ section {
 
 .footer-distributed h3{
     color:  #ffffff;
-    font: normal 36px 'Open Sans', cursive;
+    font: normal 36px 'Source Sans Pro', sans-serif;
     margin: 0;
 }
 
@@ -524,7 +516,6 @@ img {
 
 
 @section('content')
-
     <div class="bg">
         <!------ Include the above in your HEAD tag ---------->
 
