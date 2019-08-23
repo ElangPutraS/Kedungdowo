@@ -11,11 +11,17 @@
         @endif
     </div>
 
-    <header>
-        <h1 class="stackable ml10">
-            <span class="text-wrapper">
-                <span class="letters">Selamat Datang di Desa Kedungdowo</span>
-            </span>
+    <header style="color: white">
+        <img src="http://localhost:8000/img/kdap.jpg" style="
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+        ">
+        <h1>
+            DESA KEDUNGDOWO
         </h1>
+        <h3>KECAMATAN PONCOWARNO KABUPATEN KEBUMEN</h3>
+
     </header>
 </div>

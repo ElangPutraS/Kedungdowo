@@ -385,8 +385,9 @@ section {
 .back-ground{
     position: relative;
     height: 500px;
-    background-image: url("{{asset('img/kdap1.jpg')}}");
-    background-repeat: round;
+    background-image: url("{{asset('img/header_kd.jpg')}}");
+    background-repeat: no-repeat;
+    width: 100%;
     border-bottom-left-radius: 50% 20%;
     border-bottom-right-radius: 50% 20%;
     margin-top: 0;
@@ -593,17 +594,6 @@ img {
             </div>
         </div>
 
-        <h2>Galeri Desa Kedungdowo</h2>
-
-        <div id="slidy-container" style="width: 100%">
-            <figure id="slidy">
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/eyes.jpg" alt="eyes" >
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/lou.jpg" alt="lou" >
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/lucie-2.jpg" alt="lucie-2" >
-                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/lucie.jpg" alt="lucie" >
-            </figure>
-        </div>
-
         <div class="ui hidden divider"></div>
         <div class="ui hidden divider"></div>
 
@@ -723,175 +713,3 @@ img {
 
 @endsection
 
-@push('script')
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-    <script>
-        $('.special.cards .image').dimmer({
-            on: 'hover'
-        });
-        $(document).ready(function() {
-            // Variables
-            var $curve = document.getElementById("curve");
-            var last_known_scroll_position = 0;
-            var defaultCurveValue = 350;
-            var curveRate = 3;
-            var ticking = false;
-            var curveValue;
-
-            // Handle the functionality
-            function scrollEvent(scrollPos) {
-                if (scrollPos >= 0 && scrollPos < defaultCurveValue) {
-                    curveValue = defaultCurveValue - parseFloat(scrollPos / curveRate);
-                    $curve.setAttribute(
-                        "d",
-                        "M 800 300 Q 400 " + curveValue + " 0 300 L 0 0 L 800 0 L 800 300 Z"
-                    );
-                }
-            }
-
-            // Scroll Listener
-            // https://developer.mozilla.org/en-US/docs/Web/Events/scroll
-            window.addEventListener("scroll", function(e) {
-                last_known_scroll_position = window.scrollY;
-
-                if (!ticking) {
-                    window.requestAnimationFrame(function() {
-                        scrollEvent(last_known_scroll_position);
-                        ticking = false;
-                    });
-                }
-
-                ticking = true;
-            });
-        });
-
-        var textWrapper = document.querySelector('.ml10 .letters');
-        textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
-
-        anime.timeline({loop: true})
-            .add({
-                targets: '.ml10 .letter',
-                rotateY: [-90, 0],
-                duration: 1300,
-                delay: function(el, i) {
-                    return 45 * i;
-                }
-            }).add({
-            targets: '.ml10',
-            opacity: 0,
-            duration: 1000,
-            easing: "easeOutExpo",
-            delay: 1000
-        });
-
-
-
-        $(function() {
-
-            var inWrap = $('.inner-wrapper'),
-                $slide = $('.slide');
-
-
-            function slideNext() {
-
-                inWrap.animate({left: '-200%'}, 200, function() {
-
-                    inWrap.css('left', '-100%');
-
-                    $('.slide').last().after($('.slide').first());
-
-                });
-
-            }
-
-
-            //Enabling auto scroll
-            sliderInterval = setInterval(slideNext, 5000);
-
-
-
-            $('.prev').on('click', function() {
-
-                inWrap.animate({left: '0%'}, 200, function() {
-
-                    inWrap.css('left', '-100%');
-
-                    $('.slide').first().before($('.slide').last());
-
-                });
-            });
-
-
-            $('.next').on('click', function() {
-
-                clearInterval(sliderInterval);
-
-                slideNext();
-
-            });
-
-
-        });
-
-        /* user defined variables */
-        var timeOnSlide = 3,
-            // the time each image will remain static on the screen, measured in seconds
-            timeBetweenSlides = 1,
-            // the time taken to transition between images, measured in seconds
-
-// test if the browser supports animation, and if it needs a vendor prefix to do so
-            animationstring = 'animation',
-            animation = false,
-            keyframeprefix = '',
-            domPrefixes = 'Webkit Moz O Khtml'.split(' '),
-            // array of possible vendor prefixes
-            pfx  = '',
-            slidy = document.getElementById("slidy");
-        if (slidy.style.animationName !== undefined) { animation = true; }
-        // browser supports keyframe animation w/o prefixes
-
-        if( animation === false ) {
-            for( var i = 0; i < domPrefixes.length; i++ ) {
-                if( slidy.style[ domPrefixes[i] + 'AnimationName' ] !== undefined ) {
-                    pfx = domPrefixes[ i ];
-                    animationstring = pfx + 'Animation';
-                    keyframeprefix = '-' + pfx.toLowerCase() + '-';
-                    animation = true;
-                    break;
-                }
-            }
-        }
-
-        if( animation === false ) {
-            // animate in JavaScript fallback
-        } else {
-            var images = slidy.getElementsByTagName("img"),
-                firstImg = images[0],
-                // get the first image inside the "slidy" element.
-                imgWrap = firstImg.cloneNode(false);  // copy it.
-            slidy.appendChild(imgWrap); // add the clone to the end of the images
-            var imgCount = images.length, // count the number of images in the slide, including the new cloned element
-                totalTime = (timeOnSlide + timeBetweenSlides) * (imgCount - 1), // calculate the total length of the animation by multiplying the number of _actual_ images by the amount of time for both static display of each image and motion between them
-                slideRatio = (timeOnSlide / totalTime)*100, // determine the percentage of time an induvidual image is held static during the animation
-                moveRatio = (timeBetweenSlides / totalTime)*100, // determine the percentage of time for an individual movement
-                basePercentage = 100/imgCount, // work out how wide each image should be in the slidy, as a percentage.
-                position = 0, // set the initial position of the slidy element
-                css = document.createElement("style"); // start marking a new style sheet
-            css.type = "text/css";
-            css.innerHTML += "#slidy { text-align: left; margin: 0; font-size: 0; position: relative; width: " + (imgCount * 100) + "%;  }\n"; // set the width for the slidy container
-            css.innerHTML += "#slidy img { float: left; width: " + basePercentage + "%; }\n";
-            css.innerHTML += "@"+keyframeprefix+"keyframes slidy {\n";
-            for (i=0;i<(imgCount-1); i++) { //
-                position+= slideRatio; // make the keyframe the position of the image
-                css.innerHTML += position+"% { left: -"+(i * 100)+"%; }\n";
-                position += moveRatio; // make the postion for the _next_ slide
-                css.innerHTML += position+"% { left: -"+((i+1) * 100)+"%; }\n";
-            }
-            css.innerHTML += "}\n";
-            css.innerHTML += "#slidy { left: 0%; "+keyframeprefix+"transform: translate3d(0,0,0); "+keyframeprefix+"animation: "+totalTime+"s slidy infinite; }\n"; // call on the completed keyframe animation sequence
-            document.body.appendChild(css); // add the new stylesheet to the end of the document
-        }
-    </script>
-
-
-@endpush
