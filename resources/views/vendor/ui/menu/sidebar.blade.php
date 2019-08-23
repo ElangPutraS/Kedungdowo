@@ -16,7 +16,9 @@ $items = app('laravolt.menu.sidebar')->all();
                 @if(!$items->isEmpty())
 
                     @foreach($items as $item)
-                        @if($item->hasChildren())
+                        @if($item->title == 'System')
+                        <!--           Nothing             -->
+                        @elseif($item->hasChildren())
                             <div class="item">
                                 <div class="header">{{ $item->title }}</div>
                             </div>

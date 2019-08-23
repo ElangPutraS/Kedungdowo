@@ -1,14 +1,16 @@
 <div class="back-ground">
-    <div class="ui stackable menu" style="position: absolute; left: 2%; right: 2%; top: 15px">
-        <div class="item">
-            <img src="{{ asset('img/kdap.jpg') }}">
-        </div>
-        @if(! empty(json_decode(setting()->get('Home Portal'))))
+    <div class="tablet or lower hidden">
+        <div class="ui stackable menu" style="position: absolute; left: 2%; right: 2%; top: 15px">
+            <div class="item">
+                <img src="{{ asset('img/kdap.jpg') }}">
+            </div>
+            @if(! empty(json_decode(setting()->get('Home Portal'))))
             @foreach(json_decode(setting()->get('Home Portal')) as $row)
-                @php $i = 0; @endphp
-                @include('partials.menu', ['row', $row])
+            @php $i = 0; @endphp
+            @include('partials.menu', ['row', $row])
             @endforeach
-        @endif
+            @endif
+        </div>
     </div>
 
     <header style="color: white">

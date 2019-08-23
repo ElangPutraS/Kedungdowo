@@ -13,7 +13,7 @@ return [
         'layout' => 'ui::layouts.app',
     ],
     'menu'                  => [
-        'enable' => true,
+        'enable' => false,
     ],
     'role'                  => [
         'multiple' => false,
