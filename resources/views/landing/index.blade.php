@@ -182,126 +182,6 @@ p, h1 {
 body, .text-light-black {
     color: rgba(0,0,0,0.6);
 }
-.text-black {
-    color: rgba(0,0,0,0.9);
-}
-.text-muted {
-    color: rgba(0, 0, 0, 0.3);
-}
-
-
-
-.text-uppercase {
-    text-transform: uppercase;
-}
-.ff-serif {
-    font-family: 'Lora', serif;
-}
-
-.font-weight-normal {
-    font-weight: normal;
-}
-.font-weight-medium {
-    font-weight: 500;
-}
-.lts-2px {
-    letter-spacing: 2px;
-}
-
-.text-center {
-    text-align: center;
-}
-.d-inline-block {
-    display: inline-block;
-}
-
-.p-relative {
-    position: relative;
-}
-
-
-
-.bg-white {
-    background-color: #fff;
-}
-
-
-
-
-
-
-.small {
-    font-size: 0.75rem;
-}
-.card-heading {
-    font-size: 2.25rem;
-}
-.styled-link {
-    text-decoration: none;
-    outline: none;
-    color: #2196fe;
-    transition: all 0.25s ease-in;
-}
-.styled-link:hover,
-.styled-link:focus,
-.styled-link:active {
-    color: #536dfe;
-}
-.shadow-1 {
-    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.15);
-}
-.blue-hover {
-    transition: all 0.25s ease-in;
-    border-bottom: 5px solid transparent;
-}
-.blue-hover:hover {
-    transform: translateY(-5px);
-    border: none;
-    border-bottom: 5px solid #2196fe;
-}
-.red-hover {
-    transition: all 0.25s ease-in;
-    border-bottom: 5px solid transparent;
-}
-.red-hover:hover {
-    transform: translateY(-5px);
-    border: none;
-    border-bottom: 5px solid #bf0404;
-}
-/**Margin and padding utilities*/
-.mx-auto {
-    margin-left: auto;
-    margin-right: auto;
-}
-.my-2 {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-}
-
-.mt-0 {
-    margin-top: 0;
-}
-
-.mb-0 {
-    margin-bottom: 0;
-}
-.mb-1 {
-    margin-bottom: 1rem;
-}
-.mb-2 {
-    margin-bottom: 2rem;
-}
-.ml-2 {
-    margin-left: 2rem;
-}
-.px-2 {
-    padding-left: 2rem;
-    padding-right: 2rem;
-}
-.py-2 {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-}
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
 
@@ -607,6 +487,37 @@ img {
     vertical-align: middle;
 }
 
+#slidy-container {
+    width: 70%; overflow: hidden; margin: 0 auto; height: 50%;
+}
+
+.img-circle {
+    border-radius: 50%;
+}
+.img-circle {
+    border-radius: 0;
+}
+
+.ratio {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+    width: 100%;
+}
+.img-circle {
+    border-radius: 50%;
+}
+.img-responsive {
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+
 </style>
 @endpush
 
@@ -641,57 +552,56 @@ img {
             <div class="ui stackable three column grid">
                 <div class="column">
                     <a href="https://kedungdowopark.wordpress.com">
-                    <div class="ui fluid card">
-                        <div class=" card image">
-                            <img src="{{asset('img/kdap.jpg')}}">
-                        </div>
-                        <div class="content">
-                            <div class="header">
-                                Kedungdowo Adventure Park
+                        <div class="ui fluid card">
+                            <div class=" card image">
+                                <img src="{{asset('img/kdap.jpg')}}">
+                            </div>
+                            <div class="content">
+                                <div class="header"> Kedungdowo Adventure Park </div>
                             </div>
                         </div>
-                    </div></a>
+                    </a>
                 </div>
                 <div class="column">
-                    <div class="ui fluid card">
-                        <div class="image">
-                            <img src="{{asset('img/kdap.jpg')}}">
+                    <a href="https://kedungdowopark.wordpress.com">
+                        <div class="ui fluid card">
+                            <div class=" card image">
+                                <img src="{{asset('img/kdap.jpg')}}">
+                            </div>
+                            <div class="content">
+                                <div class="header">
+                                    Kedungdowo Adventure Park
+                                </div>
+                            </div>
                         </div>
-                        <div class="content">
-                            <a class="header">Kuda Kepang</a>
-                        </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="column">
-                    <div class="ui fluid card">
-                        <div class="image">
-                            <img src="{{asset('img/kdap.jpg')}}">
+                    <a href="https://kedungdowopark.wordpress.com">
+                        <div class="ui fluid card">
+                            <div class=" card image">
+                                <img src="{{asset('img/kdap.jpg')}}">
+                            </div>
+                            <div class="content">
+                                <div class="header">
+                                    Kedungdowo Adventure Park
+                                </div>
+                            </div>
                         </div>
-                        <div class="content">
-                            <a class="header">Nyadran</a>
-                        </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
 
         <h2>Galeri Desa Kedungdowo</h2>
 
-
-        <div class="container">
-            <div class="slider-wrapper">
-                <div class="inner-wrapper">
-                    <div class="slide">1</div>
-                    <div class="slide">2</div>
-                    <div class="slide">3</div>
-                    <div class="slide">4</div>
-                    <div class="slide">5</div>
-                </div>
-            </div>
-
-            <div class="button prev"></div>
-            <div class="button next"></div>
-
+        <div id="slidy-container" style="width: 100%">
+            <figure id="slidy">
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/eyes.jpg" alt="eyes" >
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/lou.jpg" alt="lou" >
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/lucie-2.jpg" alt="lucie-2" >
+                <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/lucie.jpg" alt="lucie" >
+            </figure>
         </div>
 
         <div class="ui hidden divider"></div>
@@ -737,9 +647,20 @@ img {
             <h2>Produk Kami</h2>
             <ul class="cards">
                 <li class="cards_item">
-                    <div class="card">
-                        <div class="card_image center aligned"><img style="width: 170px; height: 170px; border-radius: 50%;margin-left: 80px; margin-top: 10px"
-                                                                    class="ui large image" src="{{ asset('img/kdap1.jpg') }}" /></div>
+                    <div class="card full-width">
+                        <div class="card_image"><a href="http://trovacamporall.com" class="ratio img-responsive img-circle"
+                                                                  style="background-image: url({{asset('img/kdap1.jpg')}});"></a></div>
+                        <div style="margin-bottom: 0" class="card_content">
+                            <h2 class="card_title">Card Grid Layout</h2>
+                            <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
+                            <button class="btn card_btn">Read More</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="cards_item">
+                    <div class="card full-width">
+                        <div class="card_image"><a href="http://trovacamporall.com" class="ratio img-responsive img-circle"
+                                                   style="background-image: url({{asset('img/kdap1.jpg')}});"></a></div>
                         <div class="card_content">
                             <h2 class="card_title">Card Grid Layout</h2>
                             <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
@@ -748,18 +669,9 @@ img {
                     </div>
                 </li>
                 <li class="cards_item">
-                    <div class="card">
-                        <div class="card_image"><img src="https://picsum.photos/500/300/?image=5"></div>
-                        <div class="card_content">
-                            <h2 class="card_title">Card Grid Layout</h2>
-                            <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
-                            <button class="btn card_btn">Read More</button>
-                        </div>
-                    </div>
-                </li>
-                <li class="cards_item">
-                    <div class="card">
-                        <div class="card_image"><img src="https://picsum.photos/500/300/?image=11"></div>
+                    <div class="card full-width">
+                        <div class="card_image"><a href="http://trovacamporall.com" class="ratio img-responsive img-circle"
+                                                   style="background-image: url({{asset('img/kdap1.jpg')}});"></a></div>
                         <div class="card_content">
                             <h2 class="card_title">Card Grid Layout</h2>
                             <p class="card_text">Demo of pixel perfect pure CSS simple responsive card grid layout</p>
@@ -769,127 +681,44 @@ img {
                 </li>
             </ul>
         </div>
-        <!--
-        <div class="ui segment">
-            <h2 style="margin-left: 50px; margin-top: 15px; color: #9c1a1a">Produk Kami</h2>
-            <div class="ui stackable three column grid">
-                <div class="column">
-                    <div class="my-2 mx-auto p-relative bg-white shadow-1 red-hover" style="width: 360px; overflow: hidden; border-radius: 1px;
-                    align-items: center">
-                        <img style="width: 200px; height: 200px; border-radius: 50%;margin-left: 80px; margin-top: 10px" class="ui large image"
-                             src="{{ asset('img/kdap1.jpg') }}" />
 
-                        <div class="px-2 py-2">
-                            <h1 class="ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
-                                Planning your final summer trip
-                            </h1>
+        <h2 style="align-items: center ">Feedback</h2>
 
-                            <p class="mb-1">
-                                Summer is coming to a close just around the corner. But it's not too late to squeeze in another weekend trip &hellip;
-                            </p>
+        <div class="ui two column stackable grid container">
+            <div class="column">
 
-                        </div>
-
-                        <a href="#0" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
-                            Read More
-                        </a>
+                    <img class="ui tiny left floated image" src="{{asset('img/kdap.jpg')}}" style="border-radius: 50%">
+                    <div class="header">Elliot Fu</div>
+                    <div class="meta">Pengunjung</div>
+                    <div class="description">
+                        Elliot Fu is a film-maker from New York. Kayanya sih seperti itu ya
                     </div>
+            </div>
+            <div class="column">
+                    <img class="ui tiny floated left image" src="{{asset('img/kdap.jpg')}}" style="border-radius: 50%">
+                    <div class="header">Veronika Ossi</div>
+                    <div class="meta">Pengunjung</div>
+                    <div class="description">
+                        Veronika Ossi is a set designer living in New York who enjoys kittens, music, and partying.
+                    </div>
+            </div>
+            <div class="column">
+                <img class="ui tiny left floated image" src="{{asset('img/kdap.jpg')}}" style="border-radius: 50%">
+                <div class="header">Jenny Hess</div>
+                <div class="meta">Perangkat Desa</div>
+                <div class="description">
+                    Jenny is a student studying Media Management at the New School
                 </div>
-                <div class="column">
-                    <div class="my-2 mx-auto p-relative bg-white shadow-1 red-hover" style="width: 360px; overflow: hidden; border-radius: 1px;
-                    align-items: center">
-                        <img style="width: 200px; height: 200px; border-radius: 50%;margin-left: 80px; margin-top: 10px" class="ui large image"
-                             src="{{ asset('img/kdap1.jpg') }}" />
-
-                        <div class="px-2 py-2">
-                            <h1 class="ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
-                                Planning your final summer trip
-                            </h1>
-
-                            <p class="mb-1">
-                                Summer is coming to a close just around the corner. But it's not too late to squeeze in another weekend trip &hellip;
-                            </p>
-
-                        </div>
-
-                        <a href="#0" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
-                            Read More
-                        </a>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="my-2 mx-auto p-relative bg-white shadow-1 red-hover" style="width: 360px; overflow: hidden; border-radius: 1px;
-                    align-items: center">
-                        <img style="width: 200px; height: 200px; border-radius: 50%;margin-left: 80px; margin-top: 10px" class="ui large image"
-                             src="{{ asset('img/kdap1.jpg') }}" />
-
-                        <div class="px-2 py-2">
-                            <h1 class="ff-serif font-weight-normal text-black card-heading mt-0 mb-1" style="line-height: 1.25;">
-                                Planning your final summer trip
-                            </h1>
-
-                            <p class="mb-1">
-                                Summer is coming to a close just around the corner. But it's not too late to squeeze in another weekend trip &hellip;
-                            </p>
-
-                        </div>
-
-                        <a href="#0" class="text-uppercase d-inline-block font-weight-medium lts-2px ml-2 mb-2 text-center styled-link">
-                            Read More
-                        </a>
-                    </div>
+            </div>
+            <div class="column">
+                <img class="ui tiny left floated image" src="{{asset('img/kdap.jpg')}}" style="border-radius: 50%">
+                <div class="header">Anton Semedi</div>
+                <div class="meta">Pengunjung</div>
+                <div class="description">
+                    Jenny is a student studying Media Management at the New School
                 </div>
             </div>
         </div>
--->
-
-        <div class="ui segment">
-            <h2>Feedback</h2>
-            <div class="ui cards">
-                <div class="card">
-                    <div class="content">
-                        <img class="ui tiny left floated image" src="{{asset('img/kdap.jpg')}}" style="border-radius: 50%">
-                        <div class="header">Elliot Fu</div>
-                        <div class="meta">Pengunjung</div>
-                        <div class="description">
-                            Elliot Fu is a film-maker from New York.
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="content">
-                        <img class="ui tiny left floated image" src="{{asset('img/kdap.jpg')}}" style="border-radius: 50%">
-                        <div class="header">Veronika Ossi</div>
-                        <div class="meta">Pengunjung</div>
-                        <div class="description">
-                            Veronika Ossi is a set designer living in New York who enjoys kittens, music, and partying.
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="content">
-                        <img class="ui tiny left floated image" src="{{asset('img/kdap.jpg')}}" style="border-radius: 50%">
-                        <div class="header">Jenny Hess</div>
-                        <div class="meta">Perangkat Desa</div>
-                        <div class="description">
-                            Jenny is a student studying Media Management at the New School
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="content">
-                        <img class="ui tiny left floated image" src="{{asset('img/kdap.jpg')}}" style="border-radius: 50%">
-                        <div class="header">Anton Semedi</div>
-                        <div class="meta">Pengunjung</div>
-                        <div class="description">
-                            Jenny is a student studying Media Management at the New School
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
     </div>
 
 @endsection
@@ -1003,6 +832,65 @@ img {
 
 
         });
+
+        /* user defined variables */
+        var timeOnSlide = 3,
+            // the time each image will remain static on the screen, measured in seconds
+            timeBetweenSlides = 1,
+            // the time taken to transition between images, measured in seconds
+
+// test if the browser supports animation, and if it needs a vendor prefix to do so
+            animationstring = 'animation',
+            animation = false,
+            keyframeprefix = '',
+            domPrefixes = 'Webkit Moz O Khtml'.split(' '),
+            // array of possible vendor prefixes
+            pfx  = '',
+            slidy = document.getElementById("slidy");
+        if (slidy.style.animationName !== undefined) { animation = true; }
+        // browser supports keyframe animation w/o prefixes
+
+        if( animation === false ) {
+            for( var i = 0; i < domPrefixes.length; i++ ) {
+                if( slidy.style[ domPrefixes[i] + 'AnimationName' ] !== undefined ) {
+                    pfx = domPrefixes[ i ];
+                    animationstring = pfx + 'Animation';
+                    keyframeprefix = '-' + pfx.toLowerCase() + '-';
+                    animation = true;
+                    break;
+                }
+            }
+        }
+
+        if( animation === false ) {
+            // animate in JavaScript fallback
+        } else {
+            var images = slidy.getElementsByTagName("img"),
+                firstImg = images[0],
+                // get the first image inside the "slidy" element.
+                imgWrap = firstImg.cloneNode(false);  // copy it.
+            slidy.appendChild(imgWrap); // add the clone to the end of the images
+            var imgCount = images.length, // count the number of images in the slide, including the new cloned element
+                totalTime = (timeOnSlide + timeBetweenSlides) * (imgCount - 1), // calculate the total length of the animation by multiplying the number of _actual_ images by the amount of time for both static display of each image and motion between them
+                slideRatio = (timeOnSlide / totalTime)*100, // determine the percentage of time an induvidual image is held static during the animation
+                moveRatio = (timeBetweenSlides / totalTime)*100, // determine the percentage of time for an individual movement
+                basePercentage = 100/imgCount, // work out how wide each image should be in the slidy, as a percentage.
+                position = 0, // set the initial position of the slidy element
+                css = document.createElement("style"); // start marking a new style sheet
+            css.type = "text/css";
+            css.innerHTML += "#slidy { text-align: left; margin: 0; font-size: 0; position: relative; width: " + (imgCount * 100) + "%;  }\n"; // set the width for the slidy container
+            css.innerHTML += "#slidy img { float: left; width: " + basePercentage + "%; }\n";
+            css.innerHTML += "@"+keyframeprefix+"keyframes slidy {\n";
+            for (i=0;i<(imgCount-1); i++) { //
+                position+= slideRatio; // make the keyframe the position of the image
+                css.innerHTML += position+"% { left: -"+(i * 100)+"%; }\n";
+                position += moveRatio; // make the postion for the _next_ slide
+                css.innerHTML += position+"% { left: -"+((i+1) * 100)+"%; }\n";
+            }
+            css.innerHTML += "}\n";
+            css.innerHTML += "#slidy { left: 0%; "+keyframeprefix+"transform: translate3d(0,0,0); "+keyframeprefix+"animation: "+totalTime+"s slidy infinite; }\n"; // call on the completed keyframe animation sequence
+            document.body.appendChild(css); // add the new stylesheet to the end of the document
+        }
     </script>
 
 

@@ -9,7 +9,7 @@
     </div>
 
     <header>
-        <h1 class="ml10">
+        <h1 class="stackable ml10">
             <span class="text-wrapper">
                 <span class="letters">Selamat Datang di Desa Kedungdowo</span>
             </span>
