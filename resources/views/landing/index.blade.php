@@ -70,8 +70,10 @@
                 </div>
             </div>
         </div>
+        </div>
 
-        <div class="ui hidden divider"></div>
+        <button class="ui primary basic button oke" style="margin-top: 2%">View More <i class="angle right icon"></i></button>
+
         <div class="ui hidden divider"></div>
 
 
@@ -110,6 +112,10 @@
                 </div>
             </div>
         </div>
+
+    <button class="ui primary basic button oke">View More <i class="angle right icon"></i></button>
+
+    <div class="ui hidden divider"></div>
 
         <div class="ui segment center aligned">
             <h2>Contoh Judul</h2>
@@ -157,9 +163,14 @@
             </div>
         </div>
 
+
+    <button class="ui primary basic button oke">View More <i class="angle right icon"></i></button>
+
+    <div class="ui hidden divider"></div>
+
         <h2 style="align-items: center ">Feedback</h2>
 
-        <div class="ui two column stackable grid container">
+        <div class="ui two column doubling stackable grid">
             <div class="column">
 
                     <img class="ui tiny left floated image" src="{{asset('img/kdap.jpg')}}" style="border-radius: 50%">

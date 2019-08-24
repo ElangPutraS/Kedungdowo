@@ -131,12 +131,14 @@ a {
 }
 
 .button {
-    width: 30px;
-    height: 30px;
     border-top: 2px solid black;
-    position: absolute;
     cursor: pointer;
+}
 
+@media only screen and (max-width: 760px) {
+    .oke {
+        width: 100%;
+    }
 }
 
 .prev {
@@ -401,6 +403,19 @@ section {
     cursor: pointer;
     border: 1px solid rgba(255, 255, 255, 0.2);
     background: transparent;
+}
+
+.diluar {
+    color: #007dff;
+    padding: 0.8rem;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-weight: 400;
+    display: block;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 2%;
 }
 
 .btn:hover {
