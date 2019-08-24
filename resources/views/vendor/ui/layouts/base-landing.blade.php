@@ -12,6 +12,17 @@
     <link rel="stylesheet" type="text/css" href="{{ mix('css/all.css', 'laravolt') }}"/>
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' type='text/css'>
     <style>
+        .back-ground{
+            position: relative;
+            height: 500px;
+            background-image: url("{{asset('img/header_kd.jpg')}}") !important;
+            background-repeat: repeat;
+            width: 100%;
+            border-bottom-left-radius: 50% 20%;
+            border-bottom-right-radius: 50% 20%;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
 
         .full-width {
             width: 100% !important;

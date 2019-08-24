@@ -7,6 +7,12 @@
         background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%) !important;
     }
 
+    .img-circle {
+        border-radius: 50%;
+        height: 230px;
+        width: 230px;
+    }
+
     .btn {
         color: #ffffff;
         padding: 0.8rem;
@@ -23,6 +29,21 @@
 
     .btn:hover {
         background-color: rgba(255, 255, 255, 0.12);
+    }
+
+    .card_title {
+        color: #ffffff;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin: 0px !important;
+    }
+
+    .card_text {
+        color: #ffffff;
+        font-size: 1.2rem;
+        line-height: 1.5;
+        margin-bottom: 1.25rem;
+        font-weight: 400;
     }
 </style>
 @endpush
@@ -74,7 +95,7 @@
                     <div class="ui card full-width">
                         <div class="image"><img src="{{ asset('img/kdap1.jpg') }}"></div>
                         <div class="content gradient-background">
-                            <h2 class="card_title">Contoh Konten</h2>
+                            <h4 class="card_title">Contoh Konten</h4>
                             <p class="card_text">Desa Kedungdowo merupakan desa wisata yang penuh dengan kenangan.</p>
                             <button class="btn card_btn">Lihat</button>
                         </div>
@@ -84,7 +105,7 @@
                     <div class="ui card full-width">
                         <div class="image"><img src="{{ asset('img/kdap1.jpg') }}"></div>
                         <div class="content gradient-background">
-                            <h2 class="card_title">Contoh Konten</h2>
+                            <h4 class="card_title">Contoh Konten</h4>
                             <p class="card_text">Desa Kedungdowo merupakan desa wisata yang penuh dengan kenangan.</p>
                             <button class="btn card_btn">Lihat</button>
                         </div>
@@ -94,7 +115,93 @@
                     <div class="ui card full-width">
                         <div class="image"><img src="{{ asset('img/kdap1.jpg') }}"></div>
                         <div class="content gradient-background">
-                            <h2 class="card_title">Contoh Konten</h2>
+                            <h4 class="card_title">Contoh Konten</h4>
+                            <p class="card_text">Desa Kedungdowo merupakan desa wisata yang penuh dengan kenangan.</p>
+                            <button class="btn card_btn">Lihat</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ui segment center aligned">
+            <h2>Daya Tarik Utama Kami</h2>
+            <div class="ui stackable three column grid">
+                <div class="column">
+                    <a href="https://kedungdowopark.wordpress.com">
+                        <div class="ui fluid card">
+                            <div class=" card image">
+                                <img src="{{asset('img/kdap1.jpg')}}">
+                            </div>
+                            <div class="content gradient-background">
+                                <h4> Kedungdowo Adventure Park </h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="column">
+                    <a href="https://kedungdowopark.wordpress.com">
+                        <div class="ui fluid card">
+                            <div class=" card image">
+                                <img src="{{asset('img/kdap1.jpg')}}">
+                            </div>
+                            <div class="content gradient-background">
+                                <h4> Kedungdowo Adventure Park </h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="column">
+                    <a href="https://kedungdowopark.wordpress.com">
+                        <div class="ui fluid card">
+                            <div class=" card image">
+                                <img src="{{asset('img/kdap1.jpg')}}">
+                            </div>
+                            <div class="content gradient-background">
+                                <h4> Kedungdowo Adventure Park </h4>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="ui segment center aligned">
+            <h2>Contoh Judul</h2>
+            <br>
+            <div class="ui grid three column stackable">
+                <div class="column">
+                    <div>
+                        <img src="{{ asset('img/kdap1.jpg') }}" onclick="window.location('http://trovacamporall.com')"
+                             class="img-circle">
+                    </div>
+                    <div class="ui card full-width">
+                        <div style="margin-bottom: 0" class="content gradient-background">
+                            <h4 class="card_title">Contoh Konten</h4>
+                            <p class="card_text">Desa Kedungdowo merupakan desa wisata yang penuh dengan kenangan.</p>
+                            <button class="btn card_btn">Lihat</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div>
+                        <img src="{{ asset('img/kdap1.jpg') }}" onclick="window.location('http://trovacamporall.com')"
+                             class="img-circle">
+                    </div>
+                    <div class="ui card full-width">
+                        <div style="margin-bottom: 0" class="content gradient-background">
+                            <h4 class="card_title">Contoh Konten</h4>
+                            <p class="card_text">Desa Kedungdowo merupakan desa wisata yang penuh dengan kenangan.</p>
+                            <button class="btn card_btn">Lihat</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div>
+                        <img src="{{ asset('img/kdap1.jpg') }}" onclick="window.location('http://trovacamporall.com')"
+                             class="img-circle">
+                    </div>
+                    <div class="ui card full-width">
+                        <div style="margin-bottom: 0" class="content gradient-background">
+                            <h4 class="card_title">Contoh Konten</h4>
                             <p class="card_text">Desa Kedungdowo merupakan desa wisata yang penuh dengan kenangan.</p>
                             <button class="btn card_btn">Lihat</button>
                         </div>
