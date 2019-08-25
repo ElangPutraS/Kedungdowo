@@ -9,9 +9,10 @@
     <div class="bg">
         <!------ Include the above in your HEAD tag ---------->
 
-
+        <div class="ui segment borleft-teaser">
+            <h2><i class="icon video"></i> Tentang Kedungdowo</h2>
+        </div>
         <div class="ui segment">
-            <h2>Teaser Tentang Kedungdowo</h2>
             <div class="ui stackable two column very relaxed grid">
                 <div class="column center aligned">
                     <div class='embed-container'>
@@ -29,8 +30,10 @@
             </div>
         </div>
 
-        <div class="ui segment center aligned">
-            <h2>Daya Tarik Utama Kami</h2>
+        <div class="ui segment borleft-gallery">
+            <h2><i class="icon image"></i> Contoh Judul</h2>
+        </div>
+        <div class="ui center aligned">
             <div class="ui stackable three column grid">
                 <div class="column">
                     <a href="https://kedungdowopark.wordpress.com">
@@ -70,15 +73,18 @@
                 </div>
             </div>
         </div>
-        </div>
 
-        <button class="ui primary basic button oke" style="margin-top: 2%">View More <i class="angle right icon"></i></button>
+        <div class="ui hidden divider"></div>
+
+        <button class="ui primary basic button oke">View More <i class="angle right icon"></i></button>
 
         <div class="ui hidden divider"></div>
 
 
-        <div class="ui segment center aligned">
-            <h2>Contoh Judul</h2>
+        <div class="ui segment borleft-news">
+            <h2><i class="icon newspaper"></i> Contoh Judul</h2>
+        </div>
+        <div class="ui center aligned">
             <div class="ui grid three column stackable">
                 <div class="column">
                     <div class="ui card full-width">
@@ -113,15 +119,19 @@
             </div>
         </div>
 
-    <button class="ui primary basic button oke">View More <i class="angle right icon"></i></button>
+        <div class="ui hidden divider"></div>
 
-    <div class="ui hidden divider"></div>
+        <button class="ui primary basic button oke">View More <i class="angle right icon"></i></button>
 
-        <div class="ui segment center aligned">
-            <h2>Contoh Judul</h2>
-            <br>
+        <div class="ui hidden divider"></div>
+
+
+        <div class="ui segment borleft-product">
+            <h2><i class="icon food"></i> Contoh Judul</h2>
+        </div>
+        <div class="ui center aligned">
             <div class="ui grid three column stackable">
-                <div class="column">
+                <div class="column ui center aligned">
                     <div>
                         <img src="{{ asset('img/kdap1.jpg') }}" onclick="window.location('http://trovacamporall.com')"
                              class="img-circle">
@@ -134,7 +144,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="column">
+                <div class="column ui center aligned">
                     <div>
                         <img src="{{ asset('img/kdap1.jpg') }}" onclick="window.location('http://trovacamporall.com')"
                              class="img-circle">
@@ -147,7 +157,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="column">
+                <div class="column ui center aligned">
                     <div>
                         <img src="{{ asset('img/kdap1.jpg') }}" onclick="window.location('http://trovacamporall.com')"
                              class="img-circle">
@@ -163,10 +173,11 @@
             </div>
         </div>
 
+        <div class="ui hidden divider"></div>
 
-    <button class="ui primary basic button oke">View More <i class="angle right icon"></i></button>
+        <button class="ui primary basic button oke">View More <i class="angle right icon"></i></button>
 
-    <div class="ui hidden divider"></div>
+        <div class="ui hidden divider"></div>
 
         <h2 style="align-items: center ">Feedback</h2>
 

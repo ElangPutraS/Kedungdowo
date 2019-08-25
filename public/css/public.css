@@ -3,6 +3,22 @@
     padding: 0;
 }
 
+.borleft-teaser {
+    border-left: 10px solid chocolate !important;
+}
+
+.borleft-gallery {
+    border-left: 10px solid chartreuse !important;
+}
+
+.borleft-news {
+    border-left: 10px solid dodgerblue !important;
+}
+
+.borleft-product {
+    border-left: 10px solid tomato !important;
+}
+
 .gradient-background {
     color: white !important;
     background: linear-gradient(to bottom left, #EF8D9C 40%, #FFC39E 100%) !important;
@@ -197,6 +213,7 @@ section {
 
 .footer-distributed{
     background: #000;
+    color: white;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
     box-sizing: border-box;
     width: 100%;

@@ -12,6 +12,11 @@
             <div class="twelve wide column">
                 <div class="ui card full-width">
                     <div class="content">
+                        <i class="icon home"></i> Beranda / Kategori / <b>Contoh Judul</b>
+                    </div>
+                </div>
+                <div class="ui card full-width">
+                    <div class="content">
                         <b>
                             <i class="icon user"></i> Elang &nbsp;|&nbsp;
                             <i class="icon calendar alternate outline"></i> 14 Agustus 2019
