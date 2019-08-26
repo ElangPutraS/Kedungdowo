@@ -6,13 +6,60 @@
 
 
 @section('content')
-<div class="bg">
-    <div class="ui card full-width" style="margin-top: -150px">
-        <div class="content">
-            JAHAHHAHAHAH
+    <div class="bg">
+        <div class="ui grid" style="margin-top: -220px; margin-left: 5%;margin-right: 5%">
+            <div class="row">
+                <div class="twelve wide column">
+                    <div class="ui card full-width">
+                        <div class="content">
+                            <i class="icon home"></i> Beranda / <b>Contoh Kategori</b>
+                        </div>
+                    </div>
+                    <div class="ui card full-width">
+                        <div class="content">
+                            <div class="ui grid">
+                                <div class="four wide column">
+                                    <img src="{{ asset('img/kdap.jpg') }}">
+                                </div>
+                                <div class="twelve wide column">
+                                    <h4 style="margin: 0px">Sampel</h4>
+                                    <p style="font-size: 12px">
+                                        Lorem ipsum dolor sit amit.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="ui inverted divider"></div>
+
+                            <div class="ui grid">
+                                <div class="four wide column">
+                                    <img src="{{ asset('img/kdap.jpg') }}">
+                                </div>
+                                <div class="twelve wide column">
+                                    <h4 style="margin: 0px">Sampel</h4>
+                                    <p style="font-size: 12px">
+                                        Lorem ipsum dolor sit amit.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="four wide column">
+                    <div class="ui card full-width">
+                        <div class="content"><b><i class="icon list th"></i> Kategori</b></div>
+                        <div class="content">
+                            <i class="icon chevron right"></i> Semua
+
+                            <div class="ui inverted divider"></div>
+
+                            <i class="icon chevron right"></i> Kategori Lain
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-</div>
 
 @endsection
 
