@@ -1,7 +1,7 @@
 @extends('ui::layouts.landing')
 
 @push('style')
-<link href="{{ asset('css/public.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/public.css') }}" rel="stylesheet" type="text/css">
 @endpush
 
 
@@ -17,6 +17,7 @@
                     </div>
                     <div class="ui card full-width">
                         <div class="content">
+
                             <div class="ui center aligned">
                                 <div class="ui stackable three column grid">
                                     <div class="column">
@@ -55,6 +56,7 @@
                                             </div>
                                         </a>
                                     </div>
+
                                     <div class="column">
                                         <a href="https://kedungdowopark.wordpress.com">
                                             <div class="ui fluid card">
@@ -93,6 +95,32 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- <div class="ui grid">
+                                <div class="four wide column">
+                                    <img src="{{ asset('img/kdap.jpg') }}">
+                                </div>
+                                <div class="twelve wide column">
+                                    <h4 style="margin: 0px">Sampel</h4>
+                                    <p style="font-size: 12px">
+                                        Lorem ipsum dolor sit amit.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="ui inverted divider"></div>
+
+                            <div class="ui grid">
+                                <div class="four wide column">
+                                    <img src="{{ asset('img/kdap.jpg') }}">
+                                </div>
+                                <div class="twelve wide column">
+                                    <h4 style="margin: 0px">Sampel</h4>
+                                    <p style="font-size: 12px">
+                                        Lorem ipsum dolor sit amit.
+                                    </p>
+                                </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
