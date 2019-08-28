@@ -15,6 +15,7 @@ class CreateContentTable extends Migration
     {
         Schema::create('content', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('title');
             $table->string('template');
             $table->boolean('published')->default(false);
             $table->bigInteger('category_id');

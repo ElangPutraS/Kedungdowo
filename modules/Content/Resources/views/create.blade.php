@@ -60,6 +60,7 @@
   <div class="ui card full-width">
     <div class="content">
       {!! form()->post(route('content.store'))->multipart() !!}
+        {!! form()->text('title', old('title'))->placeholder('Judul')->label('Judul')->required() !!}
         <div class="field required">
             <label>Kategori</label>
             <div class="ui dropdown search selection">
@@ -87,8 +88,8 @@
                             'Berita' => 'Berita',
                             'Galeri' => 'Galeri',
                             'Produk' => 'Produk'
-        ])->label('Template') !!}
-        <div class="ui segment center aligned">
+        ], old('template'))->label('Template')->required() !!}
+        <div class="ui segment center aligned" id="berita_example" {{ old('template') == 'Berita' ? '' : 'hidden' }} >
             <h2>Contoh Judul</h2>
             <div class="ui grid three column stackable">
                 <div class="column">
@@ -123,7 +124,7 @@
                 </div>
             </div>
         </div>
-        <div class="ui segment center aligned">
+        <div class="ui segment center aligned" id="galeri_example" {{ old('template') == 'Galeri' ? '' : 'hidden' }}>
             <h2>Daya Tarik Utama Kami</h2>
             <div class="ui stackable three column grid">
                 <div class="column">
@@ -164,7 +165,7 @@
                 </div>
             </div>
         </div>
-        <div class="ui segment center aligned">
+        <div class="ui segment center aligned" id="produk_example" {{ old('template') == 'Produk' ? '' : 'hidden' }}>
             <h2>Contoh Judul</h2>
             <br>
             <div class="ui grid three column stackable">
@@ -227,3 +228,25 @@
     </div>
   </div>
 @stop
+
+@push('script')
+<script>
+    $(document).ready(function () {
+        $('select[name="template"]').change(function () {
+            var value = $(this).val();
+            $('#berita_example').hide();
+            $('#galeri_example').hide();
+            $('#produk_example').hide();
+            if (value === 'Galeri') {
+                $('#galeri_example').show();
+            } else if (value === 'Berita') {
+                $('#berita_example').show();
+            } else if (value === 'Produk') {
+                $('#produk_example').show();
+            }
+        });
+
+        $('#category_id').dropdown('set selected', {{ old('category_id') }});
+    });
+</script>
+@endpush

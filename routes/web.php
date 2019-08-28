@@ -12,5 +12,5 @@
 */
 
 Route::get('/', 'LandingController@index');
-Route::view('contoh', 'landing.list-content');
+Route::view('contoh', 'landing.gallery');
 Route::get('home', 'Home')->name('home');

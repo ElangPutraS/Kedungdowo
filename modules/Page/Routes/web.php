@@ -4,7 +4,7 @@ Route::group(
     [
         'prefix'     => '',
         'as'         => '',
-        'middleware' => ['auth'],
+        'middleware' => ['web', 'auth'],
     ],
     function (\Illuminate\Routing\Router $router) {
         $router->get('page', 'PageController@index')->name('page.index');

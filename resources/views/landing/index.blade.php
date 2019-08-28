@@ -30,154 +30,104 @@
             </div>
         </div>
 
-        <div class="ui segment borleft-gallery">
-            <h2><i class="icon image"></i> Contoh Judul</h2>
-        </div>
-        <div class="ui center aligned">
-            <div class="ui stackable three column grid">
-                <div class="column">
-                    <a href="https://kedungdowopark.wordpress.com">
-                        <div class="ui fluid card">
-                            <div class=" card image">
-                                <img src="{{asset('img/kdap1.jpg')}}">
+        @forelse($content as $section)
+            @if ($section->template == 'Berita')
+                {{-- Berita --}}
+                <div class="ui segment borleft-news">
+                    <h2><i class="icon newspaper"></i> {{ $section->title }}</h2>
+                </div>
+                <div class="ui center aligned">
+                    <div class="ui grid three column stackable">
+                        @foreach($section->pages as $page)
+                            <div class="column">
+                                <div class="ui card full-width">
+                                    <div class="image">
+                                        <div  style="background: url('{{ ! empty($page->page_files) ? $page->page_files[0] : 'img/kdap.jpg' }}');
+                                            background-size: cover !important;margin: auto;height: 233px"></div>
+                                    </div>
+                                    <div class="content gradient-background">
+                                        <h4 class="card_title">{{ $page->title }}</h4>
+                                        <p class="card_text" style="height: 60px;word-break: break-all">
+                                            {{ substr($page->short_desc, 0, 99) . (strlen($page->short_desc) > 99 ? '...' : '') }}
+                                        </p>
+                                        <button class="btn card_btn">Lihat</button>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="content gradient-background">
-                                <h4> Kedungdowo Adventure Park </h4>
+                        @endforeach
+                    </div>
+                </div>
+
+                <div class="ui hidden divider"></div>
+
+                <button class="ui primary basic button oke">View More <i class="angle right icon"></i></button>
+
+                <div class="ui hidden divider"></div>
+            @elseif ($section->template == 'Galeri')
+                {{-- Galeri --}}
+                <div class="ui segment borleft-gallery">
+                    <h2><i class="icon image"></i> {{ $section->title }}</h2>
+                </div>
+                <div class="ui center aligned">
+                    <div class="ui stackable three column grid">
+                        @foreach($section->pages as $page)
+                        <div class="column">
+                            <a href="https://kedungdowopark.wordpress.com">
+                                <div class="ui fluid card">
+                                    <div class="card image">
+                                        <div  style="background: url('{{ $page->page_files[0] }}');
+                                            background-size: cover !important;margin: auto;height: 233px"></div>
+                                    </div>
+                                    <div class="content gradient-background ui center aligned">
+                                        <h4> {{ $page->title }} </h4>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        @endforeach
+                    </div>
+                </div>
+
+                <div class="ui hidden divider"></div>
+
+                <button class="ui primary basic button oke">View More <i class="angle right icon"></i></button>
+
+                <div class="ui hidden divider"></div>
+            @elseif ($section->template == 'Produk')
+                {{-- Produk --}}
+                <div class="ui segment borleft-product">
+                    <h2><i class="icon food"></i> {{ $section->title }}</h2>
+                </div>
+                <div class="ui center aligned">
+                    <div class="ui grid three column stackable">
+                        @foreach($section->pages as $page)
+                        <div class="column ui center aligned">
+                            <div>
+                                <div style="background: url('{{ ! empty($page->page_files) ? $page->page_files[0] : 'img/kdap.jpg' }}');"
+                                     onclick="window.location('http://trovacamporall.com')" class="img-circle"></div>
+                            </div>
+                            <div class="ui card full-width">
+                                <div style="margin-bottom: 0" class="content gradient-background">
+                                    <h4 class="card_title">{{ $page->title }}</h4>
+                                    <p class="card_text" style="height: 60px;word-break: break-all">
+                                        {{ substr($page->short_desc, 0, 99) . (strlen($page->short_desc) > 99 ? '...' : '') }}
+                                    </p>
+                                    <button class="btn card_btn">Lihat</button>
+                                </div>
                             </div>
                         </div>
-                    </a>
-                </div>
-                <div class="column">
-                    <a href="https://kedungdowopark.wordpress.com">
-                        <div class="ui fluid card">
-                            <div class=" card image">
-                                <img src="{{asset('img/kdap1.jpg')}}">
-                            </div>
-                            <div class="content gradient-background">
-                                <h4> Kedungdowo Adventure Park </h4>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="column">
-                    <a href="https://kedungdowopark.wordpress.com">
-                        <div class="ui fluid card">
-                            <div class=" card image">
-                                <img src="{{asset('img/kdap1.jpg')}}">
-                            </div>
-                            <div class="content gradient-background">
-                                <h4> Kedungdowo Adventure Park </h4>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div class="ui hidden divider"></div>
-
-        <button class="ui primary basic button oke">View More <i class="angle right icon"></i></button>
-
-        <div class="ui hidden divider"></div>
-
-
-        <div class="ui segment borleft-news">
-            <h2><i class="icon newspaper"></i> Contoh Judul</h2>
-        </div>
-        <div class="ui center aligned">
-            <div class="ui grid three column stackable">
-                <div class="column">
-                    <div class="ui card full-width">
-                        <div class="image"><img src="{{ asset('img/kdap1.jpg') }}"></div>
-                        <div class="content gradient-background">
-                            <h4 class="card_title">Contoh Konten</h4>
-                            <p class="card_text">Desa Kedungdowo merupakan desa wisata yang penuh dengan kenangan.</p>
-                            <button class="btn card_btn">Lihat</button>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
-                <div class="column">
-                    <div class="ui card full-width">
-                        <div class="image"><img src="{{ asset('img/kdap1.jpg') }}"></div>
-                        <div class="content gradient-background">
-                            <h4 class="card_title">Contoh Konten</h4>
-                            <p class="card_text">Desa Kedungdowo merupakan desa wisata yang penuh dengan kenangan.</p>
-                            <button class="btn card_btn">Lihat</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="column">
-                    <div class="ui card full-width">
-                        <div class="image"><img src="{{ asset('img/kdap1.jpg') }}"></div>
-                        <div class="content gradient-background">
-                            <h4 class="card_title">Contoh Konten</h4>
-                            <p class="card_text">Desa Kedungdowo merupakan desa wisata yang penuh dengan kenangan.</p>
-                            <button class="btn card_btn">Lihat</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="ui hidden divider"></div>
+                <div class="ui hidden divider"></div>
 
-        <button class="ui primary basic button oke">View More <i class="angle right icon"></i></button>
+                <button class="ui primary basic button oke">View More <i class="angle right icon"></i></button>
 
-        <div class="ui hidden divider"></div>
-
-
-        <div class="ui segment borleft-product">
-            <h2><i class="icon food"></i> Contoh Judul</h2>
-        </div>
-        <div class="ui center aligned">
-            <div class="ui grid three column stackable">
-                <div class="column ui center aligned">
-                    <div>
-                        <img src="{{ asset('img/kdap1.jpg') }}" onclick="window.location('http://trovacamporall.com')"
-                             class="img-circle">
-                    </div>
-                    <div class="ui card full-width">
-                        <div style="margin-bottom: 0" class="content gradient-background">
-                            <h4 class="card_title">Contoh Konten</h4>
-                            <p class="card_text">Desa Kedungdowo merupakan desa wisata yang penuh dengan kenangan.</p>
-                            <button class="btn card_btn">Lihat</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="column ui center aligned">
-                    <div>
-                        <img src="{{ asset('img/kdap1.jpg') }}" onclick="window.location('http://trovacamporall.com')"
-                             class="img-circle">
-                    </div>
-                    <div class="ui card full-width">
-                        <div style="margin-bottom: 0" class="content gradient-background">
-                            <h4 class="card_title">Contoh Konten</h4>
-                            <p class="card_text">Desa Kedungdowo merupakan desa wisata yang penuh dengan kenangan.</p>
-                            <button class="btn card_btn">Lihat</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="column ui center aligned">
-                    <div>
-                        <img src="{{ asset('img/kdap1.jpg') }}" onclick="window.location('http://trovacamporall.com')"
-                             class="img-circle">
-                    </div>
-                    <div class="ui card full-width">
-                        <div style="margin-bottom: 0" class="content gradient-background">
-                            <h4 class="card_title">Contoh Konten</h4>
-                            <p class="card_text">Desa Kedungdowo merupakan desa wisata yang penuh dengan kenangan.</p>
-                            <button class="btn card_btn">Lihat</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="ui hidden divider"></div>
-
-        <button class="ui primary basic button oke">View More <i class="angle right icon"></i></button>
-
-        <div class="ui hidden divider"></div>
+                <div class="ui hidden divider"></div>
+            @endif
+        @empty
+        @endforelse
 
         <h2 style="align-items: center ">Feedback</h2>
 

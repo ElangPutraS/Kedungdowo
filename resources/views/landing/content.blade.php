@@ -41,8 +41,11 @@
                                 <img src="{{ asset('img/kdap.jpg') }}">
                             </div>
                             <div class="twelve wide column">
-                                <h4 style="margin: 0px">Sampel</h4>
-                                <p style="font-size: 12px">
+                                <h4 style="margin: 0px 0px 5px 0px">Sampel</h4>
+                                <p style="font-size: 14px">
+                                    <i class="icon calendar alternate outline"></i> 14 Agustus 2019
+                                </p>
+                                <p style="font-size: 14px">
                                     Lorem ipsum dolor sit amit.
                                 </p>
                             </div>
@@ -55,8 +58,11 @@
                                 <img src="{{ asset('img/kdap.jpg') }}">
                             </div>
                             <div class="twelve wide column">
-                                <h4 style="margin: 0px">Sampel</h4>
-                                <p style="font-size: 12px">
+                                <h4 style="margin: 0px 0px 5px 0px">Sampel</h4>
+                                <p style="font-size: 14px">
+                                    <i class="icon calendar alternate outline"></i> 14 Agustus 2019
+                                </p>
+                                <p style="font-size: 14px">
                                     Lorem ipsum dolor sit amit.
                                 </p>
                             </div>

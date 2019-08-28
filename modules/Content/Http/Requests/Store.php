@@ -15,7 +15,7 @@ class Store extends FormRequest
     {
         return [
             'template' => ['required'],
-            'published' => ['required'],
+            'title' => ['required'],
             'category_id' => ['required'],
         ];
     }

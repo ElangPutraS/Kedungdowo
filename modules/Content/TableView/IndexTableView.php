@@ -16,9 +16,10 @@ class IndexTableView extends TableView
                             'style' => 'background-color:white',
                             'class' => 'ui center aligned'
             ]),
-                        Text::make('template')->sortable(),
-            Text::make('published')->sortable(),
-            Text::make('category_id')->sortable(),
+            Text::make('title', 'Judul')->sortable(),
+            Text::make('template')->sortable(),
+            Text::make('status'),
+            Text::make('category_title', 'Kategori')->sortable('category_id'),
             RestfulButton::make('content')->except('view'),
         ];
     }

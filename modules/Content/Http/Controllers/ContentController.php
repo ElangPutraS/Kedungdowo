@@ -3,6 +3,7 @@
 namespace Modules\Content\Http\Controllers;
 
 use Illuminate\Routing\Controller;
+use Modules\Category\Models\Category;
 use Modules\Content\Http\Requests\Store;
 use Modules\Content\Http\Requests\Update;
 use Modules\Content\Models\Content;

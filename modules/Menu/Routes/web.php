@@ -4,7 +4,7 @@ Route::group(
     [
         'prefix'     => '',
         'as'         => '',
-        'middleware' => ['auth'],
+        'middleware' => ['web', 'auth'],
     ],
     function (\Illuminate\Routing\Router $router) {
         $router->get('menu', 'MenuController@index')->name('menu.index');

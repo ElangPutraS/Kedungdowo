@@ -273,12 +273,6 @@ $(document).ready(function () {
     limiter: 7000
   });
 
-  $R('#short_desc', {
-    minHeight: '100px',
-    plugins: ['limiter', 'counter'],
-    limiter: 400
-  });
-
   $('#category_id').on('change', function () {
     var category = '';
     $('#loader-page').html('<div class="ui active inverted dimmer">\n' +

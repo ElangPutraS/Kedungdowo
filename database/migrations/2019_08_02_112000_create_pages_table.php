@@ -18,7 +18,7 @@ class CreatePagesTable extends Migration
             $table->string('title');
             $table->string('slug')->unique();
             $table->text('short_desc')->nullable();
-            $table->longText('description');
+            $table->longText('description')->nullable();
             $table->string('created_by');
             $table->string('updated_by');
             $table->boolean('published')->default(false);

@@ -15,7 +15,7 @@ class Update extends Store
     {
         return [
             'template' => ['required'],
-            'published' => ['required'],
+            'title' => ['required'],
             'category_id' => ['required'],
         ];
     }
