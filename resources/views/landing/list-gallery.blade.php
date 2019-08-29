@@ -1,7 +1,7 @@
 @extends('ui::layouts.landing')
 
 @push('style')
-<link href="{{ asset('css/public.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/public.css') }}" rel="stylesheet" type="text/css">
 @endpush
 
 
