@@ -168,42 +168,6 @@
             <span class="dot" onclick="currentSlide(3)"></span>
             <span class="dot" onclick="currentSlide(4)"></span>
         </div>
-
-        <!-- <div class="ui two column doubling stackable grid">
-            <div class="column">
-
-                <img class="ui tiny left floated image" src="{{asset('img/kdap.jpg')}}" style="border-radius: 50%">
-                <div class="header"></div>
-                <div class="meta" style="font-style: oblique">Pengunjung</div>
-                <div class="description">
-                    "Elliot Fu is a film-maker from New York. Kayanya sih seperti itu ya"
-                </div>
-            </div>
-            <div class="column">
-                <img class="ui tiny floated left image" src="{{asset('img/kdap.jpg')}}" style="border-radius: 50%">
-                <div class="header">Veronika Ossi</div>
-                <div class="meta" style="font-style: oblique">Pengunjung</div>
-                <div class="description">
-                    "Veronika Ossi is a set designer living in New York who enjoys kittens, music, and partying."
-                </div>
-            </div>
-            <div class="column">
-                <img class="ui tiny left floated image" src="{{asset('img/kdap.jpg')}}" style="border-radius: 50%">
-                <div class="header">Jenny Hess</div>
-                <div class="meta" style="font-style: oblique">Perangkat Desa</div>
-                <div class="description">
-                    "Jenny is a student studying Media Management at the New School"
-                </div>
-            </div>
-            <div class="column">
-                <img class="ui tiny left floated image" src="{{asset('img/kdap.jpg')}}" style="border-radius: 50%">
-                <div class="header">Anton Semedi</div>
-                <div class="meta" style="font-style: oblique">Pengunjung</div>
-                <div class="description">
-                    "Jenny is a student studying Media Management at the New School"
-                </div>
-            </div>
-        </div> -->
     </div>
 
 @endsection
