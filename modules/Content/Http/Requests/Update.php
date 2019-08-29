@@ -14,9 +14,9 @@ class Update extends Store
     public function rules()
     {
         return [
-            'template' => ['required'],
-            'title' => ['required'],
-            'category_id' => ['required'],
+            'template' => 'required',
+            'title' => 'required|max:191|unique:content,title,' . $this->content_page->id,
+            'category_id' => 'required',
         ];
     }
 

@@ -52,12 +52,12 @@ class Page extends Model implements HasMedia
 
     public function createdBy()
     {
-        return $this->belongsTo('Modules\User\Models\User', 'created_by');
+        return $this->belongsTo('App\User', 'created_by');
     }
 
     public function updatedBy()
     {
-        return $this->belongsTo('Modules\User\Models\User', 'updated_by');
+        return $this->belongsTo('App\User', 'updated_by');
     }
 
     public function getStatusAttribute()
@@ -77,14 +77,14 @@ class Page extends Model implements HasMedia
 
     public function getMadeByAttribute()
     {
-        $user = $this->createdBy->username;
+        $user = $this->createdBy->name;
 
         return $user;
     }
 
     public function getEditedByAttribute()
     {
-        $user = $this->updatedBy->username;
+        $user = $this->updatedBy->name;
 
         return $user;
     }

@@ -3,6 +3,7 @@
 namespace Modules\Content\Http\Controllers;
 
 use Illuminate\Routing\Controller;
+use Illuminate\Support\Str;
 use Modules\Category\Models\Category;
 use Modules\Content\Http\Requests\Store;
 use Modules\Content\Http\Requests\Update;
@@ -25,6 +26,8 @@ class ContentController extends Controller
 
     public function store(Store $request)
     {
+        $slug = Str::slug($request->title);
+        $request->request->add(['slug' => $slug]);
         Content::create($request->all());
 
         return redirect()->route('content.index')->withSuccess('Content saved');
@@ -40,11 +43,15 @@ class ContentController extends Controller
         return view('content::edit', compact('content'));
     }
 
-    public function update(Update $request, Content $content)
+    public function update(Update $request, Content $content_page)
     {
-        $content->update($request->all());
+        if ($request->title != $content_page->title) {
+            $slug = Str::slug($request->title);
+            $request->request->add(['slug' => $slug]);
+        }
+        $content_page->update($request->all());
 
-        return redirect()->back()->withSuccess('Content saved');
+        return redirect()->route('content.index')->withSuccess('Content saved');
     }
 
     public function destroy(Content $content)

@@ -12,85 +12,28 @@
                 <div class="twelve wide column">
                     <div class="ui card full-width">
                         <div class="content">
-                            <i class="icon home"></i> Beranda / <b>Contoh Kategori</b>
+                            <i class="icon home"></i> <a href="{{ url('/') }}">Beranda</a> / <b>{{ $list->title }}</b>
                         </div>
                     </div>
                     <div class="ui card full-width">
                         <div class="content">
                             <div class="ui center aligned">
                                 <div class="ui stackable three column grid">
-                                    <div class="column">
-                                        <a href="https://kedungdowopark.wordpress.com">
-                                            <div class="ui fluid card">
-                                                <div class=" card image">
-                                                    <img src="{{asset('img/kdap1.jpg')}}">
+                                    @foreach($pages as $page)
+                                        <div class="column">
+                                            <a href="{{ url($list->slug . '/' . $page->slug) }}">
+                                                <div class="ui fluid card">
+                                                    <div class="card image">
+                                                        <div  style="background: url('{{ $page->page_files[0] }}');
+                                                            background-size: cover !important;margin: auto;height: 200px"></div>
+                                                    </div>
+                                                    <div class="content gradient-background ui center aligned">
+                                                        <h4> {{ $page->title }} </h4>
+                                                    </div>
                                                 </div>
-                                                <div class="content gradient-background">
-                                                    <h4> Kedungdowo Adventure Park </h4>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="column">
-                                        <a href="https://kedungdowopark.wordpress.com">
-                                            <div class="ui fluid card">
-                                                <div class=" card image">
-                                                    <img src="{{asset('img/kdap1.jpg')}}">
-                                                </div>
-                                                <div class="content gradient-background">
-                                                    <h4> Kedungdowo Adventure Park </h4>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="column">
-                                        <a href="https://kedungdowopark.wordpress.com">
-                                            <div class="ui fluid card">
-                                                <div class=" card image">
-                                                    <img src="{{asset('img/kdap1.jpg')}}">
-                                                </div>
-                                                <div class="content gradient-background">
-                                                    <h4> Kedungdowo Adventure Park </h4>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="column">
-                                        <a href="https://kedungdowopark.wordpress.com">
-                                            <div class="ui fluid card">
-                                                <div class=" card image">
-                                                    <img src="{{asset('img/kdap1.jpg')}}">
-                                                </div>
-                                                <div class="content gradient-background">
-                                                    <h4> Kedungdowo Adventure Park </h4>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="column">
-                                        <a href="https://kedungdowopark.wordpress.com">
-                                            <div class="ui fluid card">
-                                                <div class=" card image">
-                                                    <img src="{{asset('img/kdap1.jpg')}}">
-                                                </div>
-                                                <div class="content gradient-background">
-                                                    <h4> Kedungdowo Adventure Park </h4>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
-                                    <div class="column">
-                                        <a href="https://kedungdowopark.wordpress.com">
-                                            <div class="ui fluid card">
-                                                <div class=" card image">
-                                                    <img src="{{asset('img/kdap1.jpg')}}">
-                                                </div>
-                                                <div class="content gradient-background">
-                                                    <h4> Kedungdowo Adventure Park </h4>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </div>
+                                            </a>
+                                        </div>
+                                    @endforeach
                                 </div>
                             </div>
                         </div>

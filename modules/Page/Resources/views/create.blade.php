@@ -75,17 +75,13 @@
 
         <div class="field field-short" hidden>
             <label class="label-short">Deskripsi Singkat</label>
-            <textarea name="short_desc" id="short_desc">
-          {!! old('short_desc') !!}
-        </textarea>
+            <textarea name="short_desc" id="short_desc">{!! old('short_desc') !!}</textarea>
             <span><small><i>Maksimal 400 karakter</i></small></span>
         </div>
 
         <div class="field required field-description" hidden>
             <label class="label-description">Deskripsi</label>
-            <textarea name="description" id="description">
-          {!! old('description') !!}
-        </textarea>
+            <textarea name="description" id="description">{!! old('description') !!}</textarea>
             <span><small><i>Maksimal 7000 karakter</i></small></span>
         </div>
         <span class="text-red error-description" hidden><small><strong>Field Deskripsi wajib diisi</strong></small></span>

@@ -26,9 +26,9 @@
             </h1>
             <h3>KECAMATAN PONCOWARNO KABUPATEN KEBUMEN</h3>
         @elseif(! empty($list))
-            <h1 style="text-transform: uppercase">Daftar Kategori</h1>
+            <h1 style="text-transform: uppercase">Daftar {{ $list->title }}</h1>
         @else
-            <h1 style="text-transform: uppercase">Contoh Judul</h1>
+            <h1 style="text-transform: uppercase">{{ $page->title }}</h1>
         @endif
     </header>
 

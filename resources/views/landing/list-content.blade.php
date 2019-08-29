@@ -12,48 +12,38 @@
                 <div class="twelve wide column">
                     <div class="ui card full-width">
                         <div class="content">
-                            <i class="icon home"></i> Beranda / <b>Contoh Kategori</b>
+                            <i class="icon home"></i> <a href="{{ url('/') }}">Beranda</a> / <b>{{ $list->title }}</b>
                         </div>
                     </div>
                     <div class="ui card full-width">
                         <div class="content">
-                            <div class="ui grid">
-                                <div class="four wide column">
-                                    <img src="{{ asset('img/kdap.jpg') }}">
-                                </div>
-                                <div class="twelve wide column">
-                                    <h4 style="margin: 0px 0px 10px 0px">Sampel</h4>
-                                    <p style="font-size: 14px">
-                                        <b>
-                                            <i class="icon user"></i> Elang &nbsp;|&nbsp;
-                                            <i class="icon calendar alternate outline"></i> 14 Agustus 2019
-                                        </b>
-                                    </p>
-                                    <p style="font-size: 14px">
-                                        Lorem ipsum dolor sit amit.
-                                    </p>
-                                </div>
-                            </div>
+                            @foreach($pages as $page)
 
-                            <div class="ui inverted divider"></div>
+                                <div class="ui grid">
+                                    <div class="four wide column">
+                                        <div class="image">
+                                            <div  style="background: url('{{ ! empty($page->page_files) ? $page->page_files[0] : url('img/kdap.jpg') }}');
+                                                background-size: cover !important;margin: auto;height: 125px"></div>
+                                        </div>
+                                    </div>
+                                    <div class="twelve wide column">
+                                        <a href="{{ url($list->slug . '/' . $page->slug) }}">
+                                            <h4 style="margin: 0px 0px 10px 0px">{{ $page->title }}</h4>
+                                        </a>
+                                        <p style="font-size: 14px">
+                                            <b>
+                                                <i class="icon user"></i> {{ $page->made_by }} &nbsp;|&nbsp;
+                                                <i class="icon calendar alternate outline"></i> {{ \Carbon\Carbon::createFromTimeString($page->created_at)->format('d F Y') }}
+                                            </b>
+                                        </p>
+                                        <p style="font-size: 14px;word-break: break-all">
+                                            {{ $page->short_desc }}
+                                        </p>
+                                    </div>
+                                </div>
 
-                            <div class="ui grid">
-                                <div class="four wide column">
-                                    <img src="{{ asset('img/kdap.jpg') }}">
-                                </div>
-                                <div class="twelve wide column">
-                                    <h4 style="margin: 0px 0px 10px 0px">Sampel</h4>
-                                    <p style="font-size: 14px">
-                                        <b>
-                                            <i class="icon user"></i> Elang &nbsp;|&nbsp;
-                                            <i class="icon calendar alternate outline"></i> 14 Agustus 2019
-                                        </b>
-                                    </p>
-                                    <p style="font-size: 14px">
-                                        Lorem ipsum dolor sit amit.
-                                    </p>
-                                </div>
-                            </div>
+                                <div class="ui inverted divider"></div>
+                            @endforeach
                         </div>
                     </div>
                 </div>

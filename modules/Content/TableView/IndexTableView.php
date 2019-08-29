@@ -17,6 +17,7 @@ class IndexTableView extends TableView
                             'class' => 'ui center aligned'
             ]),
             Text::make('title', 'Judul')->sortable(),
+            Text::make('slug', 'Kode')->sortable(),
             Text::make('template')->sortable(),
             Text::make('status'),
             Text::make('category_title', 'Kategori')->sortable('category_id'),

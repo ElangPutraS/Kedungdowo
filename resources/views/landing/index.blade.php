@@ -50,17 +50,13 @@
                                         <p class="card_text" style="height: 60px;word-break: break-all">
                                             {{ substr($page->short_desc, 0, 99) . (strlen($page->short_desc) > 99 ? '...' : '') }}
                                         </p>
-                                        <button class="btn card_btn">Lihat</button>
+                                        <a href="{{ url($section->slug . '/' . $page->slug) }}"><button class="btn card_btn">Lihat</button></a>
                                     </div>
                                 </div>
                             </div>
                         @endforeach
                     </div>
                 </div>
-
-                <div class="ui hidden divider"></div>
-
-                <button class="ui primary basic button oke">View More <i class="angle right icon"></i></button>
 
                 <div class="ui hidden divider"></div>
             @elseif ($section->template == 'Galeri')
@@ -72,7 +68,7 @@
                     <div class="ui stackable three column grid">
                         @foreach($section->pages as $page)
                         <div class="column">
-                            <a href="https://kedungdowopark.wordpress.com">
+                            <a href="{{ url($section->slug . '/' . $page->slug) }}">
                                 <div class="ui fluid card">
                                     <div class="card image">
                                         <div  style="background: url('{{ $page->page_files[0] }}');
@@ -89,10 +85,6 @@
                 </div>
 
                 <div class="ui hidden divider"></div>
-
-                <button class="ui primary basic button oke">View More <i class="angle right icon"></i></button>
-
-                <div class="ui hidden divider"></div>
             @elseif ($section->template == 'Produk')
                 {{-- Produk --}}
                 <div class="ui segment borleft-product">
@@ -103,8 +95,7 @@
                         @foreach($section->pages as $page)
                         <div class="column ui center aligned">
                             <div>
-                                <div style="background: url('{{ ! empty($page->page_files) ? $page->page_files[0] : 'img/kdap.jpg' }}');"
-                                     onclick="window.location('http://trovacamporall.com')" class="img-circle"></div>
+                                <div style="background: url('{{ ! empty($page->page_files) ? $page->page_files[0] : 'img/kdap.jpg' }}');" class="img-circle"></div>
                             </div>
                             <div class="ui card full-width">
                                 <div style="margin-bottom: 0" class="content gradient-background">
@@ -112,7 +103,7 @@
                                     <p class="card_text" style="height: 60px;word-break: break-all">
                                         {{ substr($page->short_desc, 0, 99) . (strlen($page->short_desc) > 99 ? '...' : '') }}
                                     </p>
-                                    <button class="btn card_btn">Lihat</button>
+                                    <a href="{{ url($section->slug . '/' . $page->slug) }}"><button class="btn card_btn">Lihat</button></a>
                                 </div>
                             </div>
                         </div>
@@ -121,11 +112,10 @@
                 </div>
 
                 <div class="ui hidden divider"></div>
-
-                <button class="ui primary basic button oke">View More <i class="angle right icon"></i></button>
-
-                <div class="ui hidden divider"></div>
             @endif
+            <a href="{{ url($section->slug) }}" class="ui primary basic button oke">View More <i class="angle right icon"></i></a>
+
+            <div class="ui hidden divider"></div>
         @empty
         @endforelse
 

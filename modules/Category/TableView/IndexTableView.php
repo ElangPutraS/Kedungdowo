@@ -17,7 +17,7 @@ class IndexTableView extends TableView
                 'class' => 'ui center aligned',
             ]),
             Text::make('title', 'Judul')->sortable()->setHeaderAttributes(['width' => '260px']),
-            Text::make('slug', 'Slug')->sortable()->setHeaderAttributes(['width' => '260px']),
+            Text::make('slug', 'Kode')->sortable()->setHeaderAttributes(['width' => '260px']),
             Text::make('parent_title', 'Parent Kategori')
                 ->setHeaderAttributes(['class' => 'ui center aligned'])
                 ->setCellAttributes(['class' => 'ui center aligned']),

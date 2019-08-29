@@ -14,3 +14,5 @@
 Route::get('/', 'LandingController@index');
 Route::view('contoh', 'landing.gallery');
 Route::get('home', 'Home')->name('home');
+Route::get('/{category}', 'LandingController@contentList');
+Route::get('/{category}/{slug}', 'LandingController@show');

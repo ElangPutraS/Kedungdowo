@@ -30,7 +30,7 @@ class CategoryController extends Controller
 
     public function store(Store $request)
     {
-        $slug = time() . '-' . Str::slug($request->title);
+        $slug = Str::slug($request->title);
         $request->request->add(['slug' => $slug]);
         $request->request->set('parent_id', $request->parent_id == 0 ? null : $request->parent_id);
         Category::create($request->all());
@@ -60,7 +60,7 @@ class CategoryController extends Controller
     public function update(Update $request, Category $category)
     {
         if ($request->title != $category->title) {
-            $slug = time() . '-' . Str::slug($request->title);
+            $slug = Str::slug($request->title);
             $request->request->add(['slug' => $slug]);
         }
         $request->request->set('parent_id', $request->parent_id == 0 ? null : $request->parent_id);
